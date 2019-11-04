@@ -5,4 +5,4 @@ GBP,British Pound,yes
 TRY,Turkish Lira,no
 USD,US Dollar,yes
 TES,TESTING,yes
-TES,TESTING,yes
+xxx,TESTING,yes

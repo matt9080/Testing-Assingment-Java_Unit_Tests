@@ -78,7 +78,7 @@ public class CurrencyDatabaseTest {
     @Test
     public void getCurrenciesListUsedTest(){
         //To Test if list is returning properly
-        List<Currency> cloneList = currDB.getCurrencies();
+        List<Currency> cloneList = currDB.currencies;
         assertEquals(cloneList,currDB.getCurrencies());
     }
 
@@ -133,17 +133,16 @@ public class CurrencyDatabaseTest {
 //    public void exchangeRateSuccessTest() throws Exception {
 //        Currency currency_1 = new Currency(CURR_CODE,CURR_NAME,false);
 //        Currency currency_2 = new Currency(CURR_CODE_2,CURR_NAME_2,true);
-//        CurrencyDatabase currDB = spy(CurrencyDatabase.class);
+////        CurrencyDatabase currDB =
 //        DefaultCurrencyServer currencyServer = mock(DefaultCurrencyServer.class);
 //
 //        doReturn(currency_1).when(currDB).getCurrencyByCode(currency_1.code);
 //        doReturn(currency_2).when(currDB).getCurrencyByCode(currency_2.code);
 //        ExchangeRate exchangeRate = new ExchangeRate(currency_1,currency_2,1.5);
 //
-////        stub(currencyServer.getExchangeRate(currency_1.code,currency_2.code)).toReturn(1.5);
+//        doReturn(2).when(currencyServer.getExchangeRate(currency_1.code, currency_2.code));
 ////        when(currencyServer.getExchangeRate(currency_1.code,currency_2.code)).thenReturn(1.5);
-//        doReturn(1.5).when(currencyServer.getExchangeRate(currency_1.code,currency_2.code));
-//
+////        doReturn(1.5).when(currencyServer.getExchangeRate(currency_1.code,currency_2.code));
 //
 //        double xz = currencyServer.getExchangeRate(currency_1.code, currency_2.code);
 //        ExchangeRate axeq = currDB.getExchangeRate(currency_1.code, currency_2.code);
