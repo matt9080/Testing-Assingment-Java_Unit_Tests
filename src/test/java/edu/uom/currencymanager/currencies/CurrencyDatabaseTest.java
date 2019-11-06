@@ -47,11 +47,27 @@ public class CurrencyDatabaseTest {
         assertEquals(currentSizeOfList + 1, currDB.currencies.size());
     }
 
-//    @Test
-//    public void AddCurrencyPreExistingTest() {
-//        // Test to add currency already in the list.
-//
-//    }
+    @Test
+    public void addCurrencySuccessMessageReturnedTest() throws Exception {
+        assertEquals("Currency added", currDB.addCurrency(CURR_CODE,CURR_NAME,true));
+    }
+
+    @Test
+    public void addCurrencyFailureCurrencyCode2ShortTest() throws Exception {
+        final String CURR_CODE_SHORT = "XS";
+        assertEquals("A currency code should have 3 characters.", currDB.addCurrency(CURR_CODE_SHORT,CURR_NAME,true));
+    }
+
+    @Test
+    public void addCurrecnyFailureCurrencyName2ShortTest() throws Exception {
+        final String CURR_NAME_SHORT = "XXX";
+        assertEquals("A currency's name should be at least 4 characters long.", currDB.addCurrency(CURR_CODE,CURR_NAME_SHORT,true));
+    }
+
+    @Test
+    public void addCurrencyFailureCurrencyAlreadyExistsTest() throws Exception {
+        assertEquals("The currency " + CURR_CODE_2 + " already exists.", currDB.addCurrency(CURR_CODE_2,CURR_NAME_2,true));
+    }
 
     @Test
     public void getCurrencyCodeSuccessTest() {  // Test to check if a correct currency code is returned.
@@ -60,7 +76,6 @@ public class CurrencyDatabaseTest {
         Currency currencyTest = currDB.getCurrencyByCode(currency.code);
 
         assertEquals(currency.code, currencyTest.code);
-
     }
 
     @Test
@@ -85,7 +100,6 @@ public class CurrencyDatabaseTest {
     @Test
     public void getMajorCurrenciesSuccessTest(){    // Problem expected list returns with space behind object
         Currency nonMajorCurrency = new Currency(CURR_CODE,CURR_NAME,false);
-        Currency MajorCurrency = new Currency(CURR_CODE_2,CURR_NAME_2,true);
 
         currDB.currencies.add(nonMajorCurrency);
 
@@ -119,16 +133,18 @@ public class CurrencyDatabaseTest {
 
     }
 
-//    @Test(expected = IllegalArgumentException.class)
-//    public void deleteCurrencyThrowsExceptionTest() throws Exception {
-//        CurrencyDatabase currDB = spy(CurrencyDatabase.class);
-//        Currency currency_2 = new Currency(CURR_CODE_2,CURR_NAME_2,true);
-//
-//        doReturn(null).when(currDB).getCurrencyByCode(currency_2.code);
-//        currDB.deleteCurrency(currency_2.code);
-//
-//    }
+    @Test
+    public void deleteCurrencySuccessCorrectMessageReturned() throws Exception{
+        currDB.currencies.add(new Currency(CURR_CODE,CURR_NAME,true));
+        assertEquals("Currency with code " + CURR_CODE + " deleted", currDB.deleteCurrency(CURR_CODE));
 
+    }
+
+    @Test
+    public void deleteCurrencyFailureCurrencyDoesNotExistMessageTest() throws Exception{
+        assertEquals("Currency does not exist: " + CURR_CODE, currDB.deleteCurrency(CURR_CODE));
+
+    }
 //    @Test
 //    public void exchangeRateSuccessTest() throws Exception {
 //        Currency currency_1 = new Currency(CURR_CODE,CURR_NAME,false);
