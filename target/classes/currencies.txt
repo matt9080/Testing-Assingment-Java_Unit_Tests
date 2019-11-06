@@ -4,5 +4,6 @@ EUR,Euro,yes
 GBP,British Pound,yes
 TRY,Turkish Lira,no
 USD,US Dollar,yes
-TES,TESTING,yes
-TES,TESTING,yes
+WWE,wwee,yes
+QWE,qwwe,yes
+REQ,sdaw,yes

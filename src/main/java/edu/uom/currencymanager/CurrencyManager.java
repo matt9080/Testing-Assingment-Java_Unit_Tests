@@ -4,22 +4,14 @@ import edu.uom.currencymanager.currencies.Currency;
 import edu.uom.currencymanager.currencies.CurrencyDatabase;
 import edu.uom.currencymanager.currencies.ExchangeRate;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class CurrencyManager {
 
-    CurrencyDatabase currencyDatabase;
-
-    public CurrencyManager() throws Exception {
-        currencyDatabase = new CurrencyDatabase();
-    }
-
-
     public static void main(String[] args) throws Exception {
 
-        CurrencyManager manager = new CurrencyManager();
+        CurrencyDatabase currencyDatabase = new CurrencyDatabase();
 
         Scanner sc = new Scanner(System.in);
 
@@ -38,20 +30,21 @@ public class CurrencyManager {
             System.out.print("\nEnter your choice: ");
 
             int choice = sc.nextInt();
+            String code,name, major,result = null;
 
             switch (choice) {
                 case 0:
                     exit = true;
                     break;
                 case 1:
-                    List<Currency> currencies = manager.currencyDatabase.getCurrencies();
+                    List<Currency> currencies = currencyDatabase.getCurrencies();
                     System.out.println("\nAvailable Currencies\n--------------------");
                     for (Currency currency : currencies) {
                         System.out.println(currency.toString());
                     }
                     break;
                 case 2:
-                    List<ExchangeRate> exchangeRates = manager.getMajorCurrencyRates();
+                    List<ExchangeRate> exchangeRates = currencyDatabase.getMajorCurrencyRates();
                     System.out.println("\nMajor Currency Exchange Rates\n-----------------------------");
                     for (ExchangeRate rate : exchangeRates) {
                         System.out.println(rate.toString());
@@ -63,38 +56,46 @@ public class CurrencyManager {
                     System.out.print("\nEnter destination currency code (e.g. GBP): ");
                     String dst = sc.next().toUpperCase();
                     try {
-                        ExchangeRate rate = manager.getExchangeRate(src, dst);
+                        ExchangeRate rate = currencyDatabase.getExchangeRate(src, dst);
                         System.out.println(rate.toString());
                     } catch (Exception e) {
                         System.out.println(e.getMessage());
                     }
+                    break;
                 case 4:
-                    System.out.print("\nEnter the currency code: ");
-                    String code = sc.next().toUpperCase();
-                    System.out.print("Enter currency name: ");
-                    String name = sc.next();
-                    name += sc.nextLine();
+                    do {
+                        System.out.print("\nEnter the currency code: ");
+                        code = sc.next().toUpperCase();
+                        System.out.print("Enter currency name: ");
+                        name = sc.next();
+                        name += sc.nextLine();
 
-                    String major = "\n";
-                    while (!(major.equalsIgnoreCase("y") || major.equalsIgnoreCase("n"))) {
-                        System.out.println("Is this a major currency? [y/n]");
-                        major = sc.next();
-                    }
+                        major = "\n";
+                        while (!(major.equalsIgnoreCase("y") || major.equalsIgnoreCase("n"))) {
+                            System.out.println("Is this a major currency? [y/n]");
+                            major = sc.next();
+                        }
 
-                    try {
-                        manager.addCurrency(code, name, major.equalsIgnoreCase("y"));
-                    } catch (Exception e) {
-                        System.err.println(e.getMessage());
-                    }
+                        try {
+                            result = currencyDatabase.addCurrency(code, name, major.equalsIgnoreCase("y"));
+                            System.out.println(result);
+
+                        } catch (Exception e) {
+                            System.err.println(e.getMessage());
+                        }
+                    }while(!result.equals("Currency added"));
                     break;
                 case 5:
+                    do{
                     System.out.print("\nEnter the currency code: ");
                     code = sc.next().toUpperCase();
                     try {
-                        manager.deleteCurrencyWithCode(code);
+                        result = currencyDatabase.deleteCurrency(code);
+                        System.out.println(result);
                     } catch (Exception e) {
                         System.err.println(e.getMessage());
                     }
+                    }while(result.contains("Currency does not exist"));
                     break;
 
             }
@@ -103,56 +104,5 @@ public class CurrencyManager {
         }
     }
 
-    public List<ExchangeRate> getMajorCurrencyRates() throws Exception {
-
-        List<ExchangeRate> exchangeRates = new ArrayList<ExchangeRate>();
-
-        List<Currency> currencies = currencyDatabase.getMajorCurrencies();
-
-        for (Currency src : currencies) {
-            for (Currency dst : currencies) {
-                if (src != dst) {
-                    exchangeRates.add(currencyDatabase.getExchangeRate(src.code, dst.code));
-                }
-            }
-        }
-        return exchangeRates;
-    }
-
-    public ExchangeRate getExchangeRate(String sourceCurrency, String destinationCurrency) throws Exception {
-        return currencyDatabase.getExchangeRate(sourceCurrency, destinationCurrency);
-    }
-
-    public void addCurrency(String code, String name, boolean major) throws Exception {
-
-        //Check format of code
-        if (code.length() != 3) {
-            throw new Exception("A currency code should have 3 characters.");
-        }
-
-        //Check minimum length of name
-        if (name.length() < 4) {
-            throw new Exception("A currency's name should be at least 4 characters long.");
-        }
-
-        //Check if currency already exists
-        if (currencyDatabase.currencyExists(code)) {
-            throw new Exception("The currency " + code + " already exists.");
-        }
-
-        //Add currency to database
-        currencyDatabase.addCurrency(new Currency(code,name,major));
-
-    }
-
-    public void deleteCurrencyWithCode(String code) throws Exception {
-
-        if (!currencyDatabase.currencyExists(code)) {
-            throw new Exception("Currency does not exist: " + code);
-        }
-
-        currencyDatabase.deleteCurrency(code);
-
-    }
 
 }

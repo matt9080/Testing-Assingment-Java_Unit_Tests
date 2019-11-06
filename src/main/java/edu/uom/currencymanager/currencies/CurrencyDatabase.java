@@ -129,23 +129,54 @@ public class CurrencyDatabase {
         return result;
     }
 
-    public void addCurrency(Currency currency) throws Exception {
+    public String addCurrency(String code, String name, boolean major) throws Exception {
 
         //Save to list
-        currencies.add(currency);
+        if (code.length() != 3) {
+            return "A currency code should have 3 characters.";
+        }
+        if (name.length() < 4) {
+            return "A currency's name should be at least 4 characters long.";
+        }
+        if (currencyExists(code)) {
+            return "The currency " + code + " already exists.";
+        }
+        currencies.add(new Currency(code,name,major));
 
         //Persist
         persist();
+        return "Currency added";
     }
 
-    public void deleteCurrency(String code) throws Exception {
+    public String deleteCurrency(String code) throws Exception {
 
         //Save to list
+        if (!currencyExists(code)) {
+            return "Currency does not exist: " + code;
+        }
         currencies.remove(getCurrencyByCode(code));
-
         //Persist
         persist();
+        return "Currency with code " + code + " deleted";
     }
+
+
+    public List<ExchangeRate> getMajorCurrencyRates() throws Exception {
+
+        List<ExchangeRate> exchangeRates = new ArrayList<ExchangeRate>();
+
+        List<Currency> currencies = getMajorCurrencies();
+
+        for (Currency src : currencies) {
+            for (Currency dst : currencies) {
+                if (src != dst) {
+                    exchangeRates.add(getExchangeRate(src.code, dst.code));
+                }
+            }
+        }
+        return exchangeRates;
+    }
+
 
     public void persist() throws Exception {
 
