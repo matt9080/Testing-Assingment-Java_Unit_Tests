@@ -104,7 +104,6 @@ public class CurrencyDatabaseTest {
 
     @Test
     public void deleteCurrencySuccessTest() throws Exception {
-
         CurrencyDatabase currDB = spy(CurrencyDatabase.class);
         Currency currency_2 = new Currency(CURR_CODE_2,CURR_NAME_2,true);
         Currency currency = new Currency(CURR_CODE,CURR_NAME,true);
