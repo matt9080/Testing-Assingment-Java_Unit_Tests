@@ -9,29 +9,35 @@ public class CurrencyTest {
 
     final String CODE = "xxx";
     final String NAME = "qwer";
-    final boolean MAJOR = true;
+    final boolean MAJOR = false;
 
     @Test
     public void toStringSuccessTest() {
+        // Setup - Creating a new currency
         Currency x = new Currency(CODE, NAME, MAJOR);
-        System.out.println(x.toString());
+        // Verify - Assert that the toString method returns the currency in the appropriate String format
         assertEquals(CODE + " - " + NAME, x.toString());
     }
 
     @Test
     public void fromStringSuccessTest() throws Exception {
-        Currency x = new Currency(CODE, NAME, MAJOR);
+        // Setup - Creating a new currency
+        Currency actual = new Currency(CODE, NAME, MAJOR);
+        // Setup - Creating a sting using the same string variables in the previously created currency.
         String testString = CODE + "," + NAME + "," + MAJOR;
-        System.out.println(testString);
-        assertTrue(objectTester(new Currency(CODE, NAME, MAJOR),Currency.fromString(testString)));
+        // Exercise - Creating a new currency by using the fromString method.
+        Currency expected = Currency.fromString(testString);
+        // Verify - Asserting that the previously created currency is equal to the currency created via the fromString method.
+        assertTrue(actual.code.equals(expected.code) && actual.name.equals(expected.name) && actual.major == expected.major);
 
     }
-    public boolean objectTester(Currency actual, Currency expected) {
-        if (actual.code.equals(expected.code) && actual.name.equals(expected.name) && actual.major == expected.major) {
-            return true;
-        } else {
-            return false;
-        }
+    // Test constructor by creating new currency and check if its bs matches
+    @Test
+    public void currencyCreationTest(){
+        // Exercise - Create a new currency using pre-determined code,name and major.
+        Currency newCurrency = new Currency(CODE,NAME,MAJOR);
+        // Verify - Assert that the new currency's code, name and major are equal to the variables passed in the creation.
+        assertTrue(CODE.equals(newCurrency.code) && NAME.equals(newCurrency.name) && MAJOR == newCurrency.major);
     }
 
 }
