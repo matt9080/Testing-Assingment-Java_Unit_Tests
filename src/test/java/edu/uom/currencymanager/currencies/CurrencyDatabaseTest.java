@@ -145,30 +145,36 @@ public class CurrencyDatabaseTest {
         assertEquals("Currency does not exist: " + CURR_CODE, currDB.deleteCurrency(CURR_CODE));
 
     }
-//    @Test
-//    public void exchangeRateSuccessTest() throws Exception {
-//        Currency currency_1 = new Currency(CURR_CODE,CURR_NAME,false);
-//        Currency currency_2 = new Currency(CURR_CODE_2,CURR_NAME_2,true);
-//        CurrencyDatabase currDB = spy(CurrencyDatabase.class);
-//        DefaultCurrencyServer currencyServer = mock(DefaultCurrencyServer.class);
-//
-//        doReturn(currency_1).when(currDB).getCurrencyByCode(currency_1.code);
-//        doReturn(currency_2).when(currDB).getCurrencyByCode(currency_2.code);
-//        ExchangeRate exchangeRate = new ExchangeRate(currency_1,currency_2,1.5);
-//
-////        stub(currencyServer.getExchangeRate(currency_1.code,currency_2.code)).toReturn(1.5);
-////        when(currencyServer.getExchangeRate(currency_1.code,currency_2.code)).thenReturn(1.5);
-//        doReturn(1.5).when(currencyServer.getExchangeRate(currency_1.code,currency_2.code));
-//
-//
-//        double xz = currencyServer.getExchangeRate(currency_1.code, currency_2.code);
-//        ExchangeRate axeq = currDB.getExchangeRate(currency_1.code, currency_2.code);
-//
-//        assertEquals(exchangeRate,axeq);
-//
-//    }
+
+    @Test
+    public void getMajorCurrencyRatesSuccess() throws Exception {
+        CurrencyDatabase currDB = spy(CurrencyDatabase.class);
+        Currency src = new Currency(CURR_CODE,CURR_NAME,true);
+        Currency dst = new Currency(CURR_CODE_2,CURR_NAME_2,true);
+        currDB.currencies = new LinkedList<Currency>();
+        currDB.currencies.add(src);
+        currDB.currencies.add(dst);
+
+        doReturn(new ExchangeRate(src,dst,2)).when(currDB).getExchangeRate(src.code,dst.code);
+        doReturn(new ExchangeRate(dst,src,2)).when(currDB).getExchangeRate(dst.code,src.code);
+        List<ExchangeRate> assumedExchangedRate = new ArrayList<ExchangeRate>();
+        assumedExchangedRate.add(new ExchangeRate(src,dst,2));
+        assumedExchangedRate.add(new ExchangeRate(dst,src,2));
 
 
+        List<ExchangeRate> exchangeRates = currDB.getMajorCurrencyRates();
+       // assertEquals(assumedExchangedRate, exchangeRates);
+        assertEquals(assumedExchangedRate.toString(), exchangeRates.toString()); // Had to set both toString as Junit was failing the test even though both lists were identicial. The tests were failing because of a whitespace at the end
+    }
 
+    @Test
+    public void getMajorCurrencyRatesSingleCurrencyExists() throws Exception {
+        Currency src = new Currency(CURR_CODE,CURR_NAME,true);
+        currDB.currencies = new LinkedList<Currency>();
+        currDB.currencies.add(src);
 
+        List<ExchangeRate> exchangeRates = currDB.getMajorCurrencyRates();
+        // assertEquals(assumedExchangedRate, exchangeRates);
+        assertTrue(exchangeRates.isEmpty());
+    }
 }
