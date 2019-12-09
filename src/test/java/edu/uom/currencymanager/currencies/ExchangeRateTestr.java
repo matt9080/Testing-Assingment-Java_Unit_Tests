@@ -1,8 +1,9 @@
 package edu.uom.currencymanager.currencies;
 
+import static junit.framework.TestCase.assertTrue;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class ExchangeRateTestr {
 
@@ -27,7 +28,15 @@ public class ExchangeRateTestr {
 
     @Test
     public void exchangeRateCreationTest() {
-        ExchangeRate exchangeRate = new ExchangeRate();
-    }
+        Currency newCurrency = new Currency(CURR_CODE,CURR_NAME,CURR_TRUE);
+        Currency newCurrency2 = new Currency(CURR_CODE_2,CURR_NAME_2,CURR_FALSE);
+        long currTime = System.currentTimeMillis();
+        ExchangeRate exchangeRate = new ExchangeRate(newCurrency,newCurrency2,RATE);
 
+        //assertEquals(System.currentTimeMillis(),exchangeRate.timeLastChecked);
+        assertTrue((exchangeRate.timeLastChecked == System.currentTimeMillis())
+            && (exchangeRate.rate == RATE)
+            && (exchangeRate.sourceCurrency.code.equals(CURR_CODE)
+            && (exchangeRate.destinationCurrency.code.equals(CURR_CODE_2))));
+    }
 }

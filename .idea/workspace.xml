@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da127f51-480e-4c33-88b8-e3246144fed2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/edu/uom/currencymanager/currencies/CurrencyDatabaseTest.class" afterPath="$PROJECT_DIR$/target/test-classes/edu/uom/currencymanager/currencies/CurrencyDatabaseTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/META-INF/currencymanager.kotlin_module" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/edu/uom/currencymanager/currencies/CurrencyManagerTest.class" afterPath="$PROJECT_DIR$/target/test-classes/edu/uom/currencymanager/currencies/CurrencyManagerTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/edu/uom/currencymanager/currencies/ExchangeRateTestr.class" afterPath="$PROJECT_DIR$/target/test-classes/edu/uom/currencymanager/currencies/ExchangeRateTestr.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/edu/uom/currencymanager/currencies/CurrencyManagerTest.java" afterPath="$PROJECT_DIR$/src/test/java/edu/uom/currencymanager/currencies/CurrencyManagerTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/edu/uom/currencymanager/currencies/ExchangeRateTestr.java" afterPath="$PROJECT_DIR$/src/test/java/edu/uom/currencymanager/currencies/ExchangeRateTestr.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/currencies.txt" afterPath="$PROJECT_DIR$/target/classes/currencies.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,47 +18,32 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/CurrencyManager$CurrencyDatabaseTest_and_3_more.coverage" NAME="CurrencyDatabaseTest and 3 more Coverage Results" MODIFIED="1575809216553" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OPEN_IN_BROWSER" value="true" />
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/../Cover" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ExchangeRateTestr.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/edu/uom/currencymanager/currencies/ExchangeRateTestr.java">
+      <file leaf-file-name="CurrencyDatabaseTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/edu/uom/currencymanager/currencies/CurrencyDatabaseTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="29" column="53" lean-forward="false" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
+            <state relative-caret-position="593">
+              <caret line="219" column="0" lean-forward="false" selection-start-line="219" selection-start-column="0" selection-end-line="219" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#818#819#0" expanded="true" />
-                <element signature="e#880#881#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExchangeRate.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/uom/currencymanager/currencies/ExchangeRate.java">
+      <file leaf-file-name="ExchangeRateTestr.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/edu/uom/currencymanager/currencies/ExchangeRateTestr.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
-              <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Util.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/uom/currencymanager/currencies/Util.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CurrencyDatabaseTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/edu/uom/currencymanager/currencies/CurrencyDatabaseTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="18" column="4" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="23" selection-end-column="37" />
+            <state relative-caret-position="462">
+              <caret line="39" column="72" lean-forward="false" selection-start-line="39" selection-start-column="72" selection-end-line="39" selection-end-column="72" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -91,10 +79,10 @@
         <option value="$PROJECT_DIR$/src/main/java/edu/uom/currencymanager/CurrencyManager.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/edu/uom/currencymanager/currencies/currencies/CurrencyDatabaseTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/edu/uom/currencymanager/currencies/CurrencyManagerTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/edu/uom/currencymanager/currencies/CurrencyDatabaseTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/edu/uom/currencymanager/currencies/CurrencyTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/edu/uom/currencymanager/currencies/ExchangeRateTestr.java" />
+        <option value="$PROJECT_DIR$/src/test/java/edu/uom/currencymanager/currencies/CurrencyManagerTest.java" />
       </list>
     </option>
   </component>
@@ -111,7 +99,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="width" value="1280" />
     <option name="height" value="800" />
   </component>
@@ -130,89 +118,47 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="currencymanager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="currencymanager" type="462c0819:PsiDirectoryNode" />
+              <item name="CurrencyManager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CurrencyManager" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="currencymanager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="currencymanager" type="462c0819:PsiDirectoryNode" />
+              <item name="CurrencyManager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CurrencyManager" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="currencymanager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="currencymanager" type="462c0819:PsiDirectoryNode" />
+              <item name="CurrencyManager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CurrencyManager" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="currencymanager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="currencymanager" type="462c0819:PsiDirectoryNode" />
+              <item name="CurrencyManager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CurrencyManager" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="currencymanager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="currencymanager" type="462c0819:PsiDirectoryNode" />
+              <item name="CurrencyManager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CurrencyManager" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="currencymanager" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="currencymanager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="currencymanager" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="currencymanager" type="462c0819:PsiDirectoryNode" />
               <item name="currencies" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="currencymanager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="currencymanager" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="currencymanager" type="462c0819:PsiDirectoryNode" />
-              <item name="currencyserver" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="currencymanager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="currencymanager" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="currencymanager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="currencymanager" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="currencymanager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="currencymanager" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="currencymanager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="currencymanager" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -239,40 +185,16 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ExchangeRateTestr.toStringSuccessTest">
-    <configuration name="CurrencyTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="edu.uom.currencymanager.currencies.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="edu.uom.currencymanager.currencies.CurrencyTest" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="currencymanager" />
-      <envs />
-    </configuration>
-    <configuration name="CurrencyTest.fromStringSuccessTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="edu.uom.currencymanager.currencies.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+  <component name="RunManager" selected="JUnit.CurrencyDatabaseTest and 3 more">
+    <configuration name="CurrencyDatabaseTest and 3 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="currencymanager" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="edu.uom.currencymanager.currencies" />
-      <option name="MAIN_CLASS_NAME" value="edu.uom.currencymanager.currencies.CurrencyTest" />
-      <option name="METHOD_NAME" value="fromStringSuccessTest" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="pattern" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -282,9 +204,14 @@
         <value defaultName="singleModule" />
       </option>
       <envs />
-      <patterns />
+      <patterns>
+        <pattern testClass="edu.uom.currencymanager.currencies.CurrencyDatabaseTest" />
+        <pattern testClass="edu.uom.currencymanager.currencies.CurrencyManagerTest" />
+        <pattern testClass="edu.uom.currencymanager.currencies.CurrencyTest" />
+        <pattern testClass="edu.uom.currencymanager.currencies.ExchangeRateTestr" />
+      </patterns>
     </configuration>
-    <configuration name="CurrencyTest.toStringSuccessTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CurrencyManagerTest.addCurrencySuccessTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="edu.uom.currencymanager.currencies.*" />
@@ -295,8 +222,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="edu.uom.currencymanager.currencies" />
-      <option name="MAIN_CLASS_NAME" value="edu.uom.currencymanager.currencies.CurrencyTest" />
-      <option name="METHOD_NAME" value="toStringSuccessTest" />
+      <option name="MAIN_CLASS_NAME" value="edu.uom.currencymanager.currencies.CurrencyManagerTest" />
+      <option name="METHOD_NAME" value="addCurrencySuccessTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
@@ -327,6 +254,31 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="currencymanager" />
       <envs />
+    </configuration>
+    <configuration name="ExchangeRateTestr.exchangeRateCreationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="edu.uom.currencymanager.currencies.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="currencymanager" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="edu.uom.currencymanager.currencies" />
+      <option name="MAIN_CLASS_NAME" value="edu.uom.currencymanager.currencies.ExchangeRateTestr" />
+      <option name="METHOD_NAME" value="exchangeRateCreationTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
     </configuration>
     <configuration name="ExchangeRateTestr.toStringSuccessTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
@@ -442,19 +394,19 @@
       </method>
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.CurrencyTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.CurrencyTest.toStringSuccessTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.CurrencyTest.fromStringSuccessTest" />
-      <item index="3" class="java.lang.String" itemvalue="Application.ExchangeRateTestr" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.ExchangeRateTestr.toStringSuccessTest" />
+      <item index="0" class="java.lang.String" itemvalue="Application.ExchangeRateTestr" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.ExchangeRateTestr.toStringSuccessTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ExchangeRateTestr.exchangeRateCreationTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.CurrencyDatabaseTest and 3 more" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.CurrencyManagerTest.addCurrencySuccessTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.ExchangeRateTestr.toStringSuccessTest" />
-        <item index="1" class="java.lang.String" itemvalue="Application.ExchangeRateTestr" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.CurrencyTest.fromStringSuccessTest" />
-        <item index="3" class="java.lang.String" itemvalue="Application.CurrencyTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.CurrencyTest.toStringSuccessTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.CurrencyDatabaseTest and 3 more" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.CurrencyManagerTest.addCurrencySuccessTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ExchangeRateTestr.exchangeRateCreationTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ExchangeRateTestr.toStringSuccessTest" />
+        <item index="4" class="java.lang.String" itemvalue="Application.ExchangeRateTestr" />
       </list>
     </recent_temporary>
   </component>
@@ -484,43 +436,45 @@
       <workItem from="1573235467777" duration="39000" />
       <workItem from="1573293920013" duration="4794000" />
       <workItem from="1573312983881" duration="593000" />
+      <workItem from="1575807755571" duration="2172000" />
+      <workItem from="1575825157404" duration="149000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CurrencyDatabaseTest_getExchangeRateUnknownDestinationCurrencyTest - 2019.11.08 at 17h 41m 20s.xml">
-      <configuration name="CurrencyDatabaseTest.getExchangeRateUnknownDestinationCurrencyTest" configurationId="JUnit" />
+    <history-entry file="CurrencyDatabaseTest_and_3_more - 2019.12.08 at 13h 42m 11s.xml">
+      <configuration name="CurrencyDatabaseTest and 3 more" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CurrencyDatabaseTest_testGetExchangeRate_ReturnRate - 2019.11.08 at 17h 42m 29s.xml">
-      <configuration name="CurrencyDatabaseTest.testGetExchangeRate_ReturnRate" configurationId="JUnit" />
+    <history-entry file="CurrencyDatabaseTest_and_3_more - 2019.12.08 at 13h 43m 37s.xml">
+      <configuration name="CurrencyDatabaseTest and 3 more" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CurrencyDatabaseTest_testGetExchangeRate_ReturnRate - 2019.11.08 at 17h 49m 44s.xml">
-      <configuration name="CurrencyDatabaseTest.testGetExchangeRate_ReturnRate" configurationId="JUnit" />
+    <history-entry file="CurrencyDatabaseTest_and_3_more - 2019.12.08 at 13h 46m 30s.xml">
+      <configuration name="CurrencyDatabaseTest and 3 more" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CurrencyDatabaseTest_testGetExchangeRate_ReturnRate - 2019.11.08 at 17h 50m 06s.xml">
-      <configuration name="CurrencyDatabaseTest.testGetExchangeRate_ReturnRate" configurationId="JUnit" />
+    <history-entry file="CurrencyDatabaseTest_and_3_more - 2019.12.08 at 13h 46m 59s.xml">
+      <configuration name="CurrencyDatabaseTest and 3 more" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CurrencyTest - 2019.11.09 at 11h 36m 07s.xml">
-      <configuration name="CurrencyTest" configurationId="JUnit" />
+    <history-entry file="CurrencyManagerTest_addCurrencySuccessTest - 2019.12.08 at 13h 42m 57s.xml">
+      <configuration name="CurrencyManagerTest.addCurrencySuccessTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CurrencyTest_currencyCreationTest - 2019.11.09 at 11h 16m 37s.xml">
-      <configuration name="CurrencyTest.currencyCreationTest" configurationId="JUnit" />
+    <history-entry file="ExchangeRateTestr_exchangeRateCreationTest - 2019.12.08 at 13h 32m 37s.xml">
+      <configuration name="ExchangeRateTestr.exchangeRateCreationTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CurrencyTest_toStringSuccessTest - 2019.11.09 at 11h 29m 57s.xml">
-      <configuration name="CurrencyTest.toStringSuccessTest" configurationId="JUnit" />
+    <history-entry file="ExchangeRateTestr_exchangeRateCreationTest - 2019.12.08 at 13h 33m 42s.xml">
+      <configuration name="ExchangeRateTestr.exchangeRateCreationTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ExchangeRateTestr_toStringSuccessTest - 2019.11.09 at 16h 24m 31s.xml">
-      <configuration name="ExchangeRateTestr.toStringSuccessTest" configurationId="JUnit" />
+    <history-entry file="ExchangeRateTestr_exchangeRateCreationTest - 2019.12.08 at 13h 41m 28s.xml">
+      <configuration name="ExchangeRateTestr.exchangeRateCreationTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ExchangeRateTestr_toStringSuccessTest - 2019.11.09 at 16h 34m 45s.xml">
-      <configuration name="ExchangeRateTestr.toStringSuccessTest" configurationId="JUnit" />
+    <history-entry file="ExchangeRateTestr_exchangeRateCreationTest - 2019.12.08 at 13h 42m 00s.xml">
+      <configuration name="ExchangeRateTestr.exchangeRateCreationTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="ExchangeRateTestr_toStringSuccessTest - 2019.11.09 at 16h 36m 04s.xml">
       <configuration name="ExchangeRateTestr.toStringSuccessTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22471000" />
+    <option name="totallyTimeSpent" value="24792000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -528,18 +482,17 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47257385" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26132685" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26537216" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -551,7 +504,9 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.73867315" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -585,7 +540,7 @@
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="5" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -619,7 +574,6 @@ actual.name.equals(expected.name);</expression-string>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
           <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -627,7 +581,6 @@ actual.name.equals(expected.name);</expression-string>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -665,10 +618,6 @@ actual.name.equals(expected.name);</expression-string>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="15" column="47" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4093#4107#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -702,7 +651,6 @@ actual.name.equals(expected.name);</expression-string>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
           <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -710,7 +658,6 @@ actual.name.equals(expected.name);</expression-string>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
           <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -718,7 +665,6 @@ actual.name.equals(expected.name);</expression-string>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
           <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -743,10 +689,6 @@ actual.name.equals(expected.name);</expression-string>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4093#4107#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -830,10 +772,6 @@ actual.name.equals(expected.name);</expression-string>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
           <caret line="19" column="28" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4093#4107#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -859,9 +797,7 @@ actual.name.equals(expected.name);</expression-string>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="31" column="16" lean-forward="true" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -894,27 +830,6 @@ actual.name.equals(expected.name);</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uom/currencymanager/CurrencyManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="19" column="28" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4093#4107#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/edu/uom/currencymanager/currencies/CurrencyManagerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="21" column="46" lean-forward="false" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/junit/framework/TestCase.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2181">
@@ -930,13 +845,6 @@ actual.name.equals(expected.name);</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uom/currencymanager/currencyserver/DefaultCurrencyServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/uom/currencymanager/currencyserver/CurrencyServer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
@@ -944,58 +852,77 @@ actual.name.equals(expected.name);</expression-string>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uom/currencymanager/CurrencyManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uom/currencymanager/currencyserver/DefaultCurrencyServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/uom/currencymanager/currencies/CurrencyDatabase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="13" column="19" lean-forward="false" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+        <state relative-caret-position="747">
+          <caret line="47" column="13" lean-forward="true" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/edu/uom/currencymanager/currencies/CurrencyTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="28" column="42" lean-forward="false" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/edu/uom/currencymanager/currencies/CurrencyDatabaseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="18" column="4" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="23" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/uom/currencymanager/currencies/Util.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="253">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/uom/currencymanager/currencies/ExchangeRate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+        <state relative-caret-position="301">
+          <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/edu/uom/currencymanager/currencies/CurrencyManagerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/edu/uom/currencymanager/currencies/CurrencyTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="39" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/edu/uom/currencymanager/currencies/CurrencyDatabaseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="593">
+          <caret line="219" column="0" lean-forward="false" selection-start-line="219" selection-start-column="0" selection-end-line="219" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/edu/uom/currencymanager/currencies/ExchangeRateTestr.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="29" column="53" lean-forward="false" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
+        <state relative-caret-position="462">
+          <caret line="39" column="72" lean-forward="false" selection-start-line="39" selection-start-column="72" selection-end-line="39" selection-end-column="72" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#818#819#0" expanded="true" />
-            <element signature="e#880#881#0" expanded="true" />
           </folding>
         </state>
       </provider>
