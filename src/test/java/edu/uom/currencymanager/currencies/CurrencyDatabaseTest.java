@@ -4,8 +4,15 @@ import edu.uom.currencymanager.currencyserver.CurrencyServer;
 import edu.uom.currencymanager.currencyserver.DefaultCurrencyServer;
 import org.junit.*;
 import org.junit.rules.ExpectedException;
+import org.junit.rules.TemporaryFolder;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.*;
+import org.apache.commons.io.FileUtils;
+
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
@@ -15,6 +22,9 @@ public class CurrencyDatabaseTest {
 
     @Rule
     public ExpectedException exception = ExpectedException.none();
+
+    @Rule
+    public TemporaryFolder tempFolder = new TemporaryFolder();
 
     final String CURR_CODE = "TES";
     final String CURR_NAME = "TESTING";
@@ -216,6 +226,62 @@ public class CurrencyDatabaseTest {
         ExchangeRate exchangeRate1 = currDB.getExchangeRate(Source.code, Destination.code);
         // Verify - Assert that even though the exchange rate took in the same source and destination currencies, the rate will be different since it uses system time.
         assertTrue(exchangeRate.rate != exchangeRate1.rate);
+    }
+
+    @Test
+    public void initParsingErrorTest() throws Exception {
+        File tempFile = tempFolder.newFile("file.txt");
+        String path = tempFolder.getRoot() + "\\file.txt";
+        FileUtils.writeStringToFile(tempFile, "Hello World");
+        currDB.currenciesFile = path;
+        try{
+            currDB.init();
+        }catch(Exception e){
+            assertEquals("Parsing error when reading currencies file.", e.getMessage());
+
+        }
+    }
+    @Test
+    public void initTwoCommasTest() throws Exception {
+        File tempFile = tempFolder.newFile("file.txt");
+        String path = tempFolder.getRoot() + "\\file.txt";
+        String firstLine = "code,name,major";
+        String secondLine = "sen,qweew";
+        FileUtils.writeStringToFile(tempFile, firstLine);
+        FileUtils.writeStringToFile(tempFile,"\n" + secondLine,true);
+        currDB.currenciesFile = path;
+        try{
+            currDB.init();
+        }catch(Exception e){
+            assertEquals("Parsing error: expected two commas in line " +secondLine, e.getMessage());
+
+        }
+    }
+    @Test
+    public void initInvalidCurrencyTest() throws Exception {
+        File tempFile = tempFolder.newFile("file.txt");
+        String firstLine = "code,name,major";
+        String secondLine = "\ncn,awDA,DDD";
+        FileUtils.writeStringToFile(tempFile, firstLine);
+        FileUtils.writeStringToFile(tempFile, secondLine,true);
+        currDB.currenciesFile = tempFolder.getRoot() + "\\file.txt";
+        try{
+            currDB.init();
+        }catch(Exception e){
+            assertEquals("Invalid currency code detected: ", e.getMessage());
+        }
+    }
+
+    @Test
+    public void persistTest() throws Exception {
+        File tempFile = tempFolder.newFile("file.txt");
+        currDB.currenciesFile = tempFolder.getRoot() + "\\file.txt";
+        currDB.currencies.add(new Currency(CURR_CODE,CURR_NAME,true));
+        currDB.persist();
+        String t = FileUtils.readFileToString(tempFile);
+        String x = "code,name,major\n"+ CURR_CODE+","+CURR_NAME+",yes\n";
+        assertEquals(x.trim(),t.trim());
+
     }
 
 
