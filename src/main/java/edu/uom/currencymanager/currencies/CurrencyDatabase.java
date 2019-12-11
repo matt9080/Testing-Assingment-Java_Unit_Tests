@@ -144,7 +144,7 @@ public class CurrencyDatabase {
         currencies.add(new Currency(code,name,major));
 
         //Persist
-        persist();
+//        writeToFile;
         return "Currency added";
     }
 
@@ -156,7 +156,7 @@ public class CurrencyDatabase {
         }
         currencies.remove(getCurrencyByCode(code));
         //Persist
-        persist();
+//        writeToFile();
         return "Currency with code " + code + " deleted";
     }
 
@@ -178,19 +178,19 @@ public class CurrencyDatabase {
     }
 
 
-    public void persist() throws Exception {
-
-        //Persist list
-        BufferedWriter writer = new BufferedWriter(new FileWriter(currenciesFile));
-
-        writer.write("code,name,major\n");
-        for (Currency currency : currencies) {
-            writer.write(currency.code + "," + currency.name + "," + (currency.major ? "yes" : "no"));
-            writer.newLine();
-        }
-
-        writer.flush();
-        writer.close();
-    }
+//    public void writeToFile(BufferedWriter writer, String filePath, List<Currency> currenciesList) throws Exception {
+//
+//        //Persist list
+//        writer = new BufferedWriter(new FileWriter(filePath));
+//
+//        writer.write("code,name,major\n");
+//        for (Currency currency : currenciesList) {
+//            writer.write(currency.code + "," + currency.name + "," + (currency.major ? "yes" : "no"));
+//            writer.newLine();
+//        }
+//
+//        writer.flush();
+//        writer.close();
+//    }
 
 }
