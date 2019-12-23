@@ -1,5 +1,6 @@
 package edu.uom.currencymanager.currencies;
 
+<<<<<<< Updated upstream
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.util.List;
@@ -52,3 +53,34 @@ public class CurrencyDatabaseUpdated {
     }
 }
 
+=======
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
+
+public class CurrencyDatabaseUpdated {
+
+    String path = "target" + File.separator + "classes" + File.separator + "test.txt";
+    List<Currency> currencyList= new ArrayList<Currency>();
+    Utilities utilities;
+    ReaderWriter readerWriter;
+
+    public CurrencyDatabaseUpdated()
+    {
+//        try{
+//            utilities = new Utilities();
+//            readerWriter = new ReaderWriter(new BufferedReader(new FileReader(path)), new BufferedWriter(new FileWriter(path)));
+//        }catch(Exception e ){
+//            System.out.println(e.getMessage());
+//        }
+    }
+
+    public List<Currency> getCurrencyList() {
+        return currencyList;
+    }
+
+//    public void loadCurrenciesFromFile(){
+//        currencyList = readerWriter.readFromFIle();
+//    }
+}
+>>>>>>> Stashed changes
