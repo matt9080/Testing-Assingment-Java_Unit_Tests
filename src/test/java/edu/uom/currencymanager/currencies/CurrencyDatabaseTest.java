@@ -92,4 +92,12 @@ public class CurrencyDatabaseTest {
 
         assertEquals(size - 1, currDB.getCurrencyList().size());
     }
+
+    @Test
+    public void getListSuccessTest(){
+        Currency currency = new Currency(CODE,NAME,MAJOR);
+        currDB.addCurrency(currency);
+
+        assertEquals(currency,currDB.getCurrencyList().get(0));
+    }
 }

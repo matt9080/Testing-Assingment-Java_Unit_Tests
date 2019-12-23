@@ -49,5 +49,6 @@ public class CurrencyDatabaseUpdated {
         readerWriter.saveListToFile(currencyList);
     }
 
+
 }
 
