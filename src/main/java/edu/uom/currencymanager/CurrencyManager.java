@@ -14,17 +14,42 @@ public class CurrencyManager {
 
     public static void main(String[] args) throws Exception {
         String path = "target" + File.separator + "classes" + File.separator + "test.txt";
-        ReaderWriter readerWriter = new ReaderWriter(path);
-        List<Currency> currencies = readerWriter.read();
 
-        for(int i = 0; i < currencies.size(); i++){
-            System.out.println(currencies.get(i));
+        CurrencyDatabaseUpdated curb = new CurrencyDatabaseUpdated(path);
+        Scanner sc = new Scanner(System.in);
+
+        boolean exit = false;
+
+        while (!exit) {
+            System.out.println("\nMain Menu\n---------\n");
+
+            System.out.println("1. List currencies");
+            System.out.println("2. List exchange rates between major currencies");
+            System.out.println("3. Check exchange rate");
+            System.out.println("4. Add currency");
+            System.out.println("5. Delete currency");
+            System.out.println("0. Quit");
+
+            System.out.print("\nEnter your choice: ");
+
+            int choice = sc.nextInt();
+
+            switch (choice) {
+                case 0:
+                    exit = true;
+                    break;
+                case 1:
+                    List<Currency> currencies = curb.getCurrencyList();
+                    System.out.println("\nAvailable Currencies\n--------------------");
+                    for (Currency currency : currencies) {
+                        System.out.println(currency.toString());
+                    }
+                    break;
+
+                case 4:
+
+            }
         }
-        currencies.add(new Currency("qwe","name",true));
-
-        readerWriter.saveListToFile(currencies);
-
-        List<Currency> test = readerWriter.read();
 
     }
 }

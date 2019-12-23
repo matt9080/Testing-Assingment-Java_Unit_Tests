@@ -2,20 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da127f51-480e-4c33-88b8-e3246144fed2" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/edu/uom/currencymanager/currencies/ReaderWriterTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/currencymanager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/currencymanager.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/uom/currencymanager/CurrencyManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/uom/currencymanager/CurrencyManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/uom/currencymanager/currencies/CurrencyDatabaseUpdated.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/uom/currencymanager/currencies/CurrencyDatabaseUpdated.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uom/currencymanager/currencies/ReaderWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/uom/currencymanager/currencies/ReaderWriter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uom/currencymanager/currencies/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/uom/currencymanager/currencies/test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/currencies.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/currencies.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/test.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/currencies.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/currencies.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/edu/uom/currencymanager/currencies/CurrencyDatabaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/uom/currencymanager/currencies/CurrencyDatabaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/edu/uom/currencymanager/currencies/ReaderWriterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/uom/currencymanager/currencies/ReaderWriterTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/edu/uom/currencymanager/CurrencyManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/uom/currencymanager/CurrencyManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/edu/uom/currencymanager/currencies/CurrencyDatabaseUpdated.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/uom/currencymanager/currencies/CurrencyDatabaseUpdated.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/uom/currencymanager/currencies/ReaderWriter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/uom/currencymanager/currencies/ReaderWriter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/edu/uom/currencymanager/currencies/CurrencyDatabaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/edu/uom/currencymanager/currencies/CurrencyDatabaseTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +68,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
   </component>
-  <component name="RunManager" selected="JUnit.ReaderWriterTest.fileParserEmptyTest">
+  <component name="RunManager" selected="JUnit.CurrencyDatabaseTest.checkCurrCodeFailLongTest">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -86,7 +81,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReaderWriterTest.fileParserCurrencyCodeErrorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CurrencyDatabaseTest.checkCurrCodeFailLongTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="currencymanager" />
       <extension name="coverage">
         <pattern>
@@ -95,15 +90,15 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="edu.uom.currencymanager.currencies" />
-      <option name="MAIN_CLASS_NAME" value="edu.uom.currencymanager.currencies.ReaderWriterTest" />
-      <option name="METHOD_NAME" value="fileParserCurrencyCodeErrorTest" />
+      <option name="MAIN_CLASS_NAME" value="edu.uom.currencymanager.currencies.CurrencyDatabaseTest" />
+      <option name="METHOD_NAME" value="checkCurrCodeFailLongTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReaderWriterTest.fileParserCurrencyExistsErrorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CurrencyDatabaseTest.checkCurrCodeFailShortTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="currencymanager" />
       <extension name="coverage">
         <pattern>
@@ -112,15 +107,15 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="edu.uom.currencymanager.currencies" />
-      <option name="MAIN_CLASS_NAME" value="edu.uom.currencymanager.currencies.ReaderWriterTest" />
-      <option name="METHOD_NAME" value="fileParserCurrencyExistsErrorTest" />
+      <option name="MAIN_CLASS_NAME" value="edu.uom.currencymanager.currencies.CurrencyDatabaseTest" />
+      <option name="METHOD_NAME" value="checkCurrCodeFailShortTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReaderWriterTest.fileParserCurrencyNameErrorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CurrencyDatabaseTest.checkCurrCodeSuccsess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="currencymanager" />
       <extension name="coverage">
         <pattern>
@@ -129,8 +124,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="edu.uom.currencymanager.currencies" />
-      <option name="MAIN_CLASS_NAME" value="edu.uom.currencymanager.currencies.ReaderWriterTest" />
-      <option name="METHOD_NAME" value="fileParserCurrencyNameErrorTest" />
+      <option name="MAIN_CLASS_NAME" value="edu.uom.currencymanager.currencies.CurrencyDatabaseTest" />
+      <option name="METHOD_NAME" value="checkCurrCodeSuccsess" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -154,7 +149,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReaderWriterTest.fileParserFirstLineError" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ReaderWriterTest.saveToListEmptyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="currencymanager" />
       <extension name="coverage">
         <pattern>
@@ -164,7 +159,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="edu.uom.currencymanager.currencies" />
       <option name="MAIN_CLASS_NAME" value="edu.uom.currencymanager.currencies.ReaderWriterTest" />
-      <option name="METHOD_NAME" value="fileParserFirstLineError" />
+      <option name="METHOD_NAME" value="saveToListEmptyTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -198,11 +193,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CurrencyDatabaseTest.checkCurrCodeFailLongTest" />
+        <item itemvalue="JUnit.CurrencyDatabaseTest.checkCurrCodeFailShortTest" />
+        <item itemvalue="JUnit.CurrencyDatabaseTest.checkCurrCodeSuccsess" />
+        <item itemvalue="JUnit.ReaderWriterTest.saveToListEmptyTest" />
         <item itemvalue="JUnit.ReaderWriterTest.fileParserEmptyTest" />
-        <item itemvalue="JUnit.ReaderWriterTest.fileParserCurrencyExistsErrorTest" />
-        <item itemvalue="JUnit.ReaderWriterTest.fileParserCurrencyNameErrorTest" />
-        <item itemvalue="JUnit.ReaderWriterTest.fileParserCurrencyCodeErrorTest" />
-        <item itemvalue="JUnit.ReaderWriterTest.fileParserFirstLineError" />
       </list>
     </recent_temporary>
   </component>
@@ -252,34 +247,35 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577119049372" />
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1576078355175">
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1577120628833">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1576078355175" />
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577120628833" />
     <state x="-1127" y="220" key="#xdebugger.evaluate" timestamp="1577117504450">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1127" y="220" key="#xdebugger.evaluate/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577117504450" />
-    <state width="1877" height="220" key="GridCell.Tab.0.bottom" timestamp="1577119052401">
+    <state width="1877" height="220" key="GridCell.Tab.0.bottom" timestamp="1577121477759">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1312" height="434" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1576081017095" />
-    <state width="1877" height="220" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577119052401" />
-    <state width="1877" height="220" key="GridCell.Tab.0.center" timestamp="1577119052401">
+    <state width="1877" height="220" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577121477759" />
+    <state width="1877" height="220" key="GridCell.Tab.0.center" timestamp="1577121477759">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1312" height="434" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1576081017095" />
-    <state width="1877" height="220" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577119052401" />
-    <state width="1877" height="220" key="GridCell.Tab.0.left" timestamp="1577119052400">
+    <state width="1877" height="220" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577121477759" />
+    <state width="1877" height="220" key="GridCell.Tab.0.left" timestamp="1577121477759">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1312" height="434" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1576081017095" />
-    <state width="1877" height="220" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577119052400" />
-    <state width="1877" height="220" key="GridCell.Tab.0.right" timestamp="1577119052401">
+    <state width="1877" height="220" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577121477759" />
+    <state width="1877" height="220" key="GridCell.Tab.0.right" timestamp="1577121477759">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1312" height="434" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1576081017095" />
-    <state width="1877" height="220" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577119052401" />
+    <state width="1877" height="220" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577121477759" />
     <state width="1312" height="324" key="GridCell.Tab.1.bottom" timestamp="1576081012414">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
@@ -304,20 +300,20 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="762" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577116136384" />
-    <state x="-914" y="0" width="921" height="1047" key="dock-window-1" timestamp="1577117416341">
+    <state x="-999" y="0" width="1006" height="1047" key="dock-window-1" timestamp="1577120451441">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-283" y="-10" width="1736" height="856" maximized="true" key="dock-window-1/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1576075474325" />
-    <state x="-914" y="0" width="921" height="1047" key="dock-window-1/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577117416341" />
+    <state x="-999" y="0" width="1006" height="1047" key="dock-window-1/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577120451441" />
     <state x="690" y="276" key="extract.method.dialog" timestamp="1576077336478">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="276" key="extract.method.dialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1576077336478" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1577116331412">
+    <state x="616" y="240" key="run.anything.popup" timestamp="1577120575405">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1576077139366" />
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577116331412" />
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577120575405" />
     <state x="623" y="225" key="search.everywhere.popup" timestamp="1576076320914">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -328,18 +324,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/edu/uom/currencymanager/currencies/ReaderWriter.java</url>
-          <line>152</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/edu/uom/currencymanager/currencies/ReaderWriter.java</url>
           <line>119</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/edu/uom/currencymanager/CurrencyManager.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="29" />
+          <url>file://$PROJECT_DIR$/src/main/java/edu/uom/currencymanager/currencies/ReaderWriter.java</url>
+          <line>152</line>
+          <option name="timeStamp" value="31" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
