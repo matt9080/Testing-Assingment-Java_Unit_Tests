@@ -41,6 +41,12 @@ public class CurrencyDatabaseUpdated {
 
     public void addCurrency(Currency currency){
         currencyList.add(currency);
+        readerWriter.saveListToFile(currencyList);
+    }
+
+    public void removeCurrency(Currency currency){
+        currencyList.remove(currency);
+        readerWriter.saveListToFile(currencyList);
     }
 
 }

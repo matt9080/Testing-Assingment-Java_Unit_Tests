@@ -3,13 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="da127f51-480e-4c33-88b8-e3246144fed2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uom/currencymanager/CurrencyManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/uom/currencymanager/CurrencyManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/uom/currencymanager/currencies/CurrencyDatabaseUpdated.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/uom/currencymanager/currencies/CurrencyDatabaseUpdated.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/edu/uom/currencymanager/currencies/CurrencyDatabaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/uom/currencymanager/currencies/CurrencyDatabaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/edu/uom/currencymanager/currencies/ReaderWriterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/uom/currencymanager/currencies/ReaderWriterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/uom/currencymanager/CurrencyManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/uom/currencymanager/CurrencyManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/edu/uom/currencymanager/currencies/CurrencyDatabaseUpdated.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/uom/currencymanager/currencies/CurrencyDatabaseUpdated.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/test.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/edu/uom/currencymanager/currencies/CurrencyDatabaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/edu/uom/currencymanager/currencies/CurrencyDatabaseTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +64,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
   </component>
-  <component name="RunManager" selected="JUnit.CurrencyDatabaseTest.checkCurrCodeFailLongTest">
+  <component name="RunManager" selected="JUnit.CurrencyDatabaseTest.removeCurrencyTest">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -81,7 +77,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CurrencyDatabaseTest.checkCurrCodeFailLongTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CurrencyDatabaseTest.addCurrencyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="currencymanager" />
       <extension name="coverage">
         <pattern>
@@ -91,14 +87,14 @@
       </extension>
       <option name="PACKAGE_NAME" value="edu.uom.currencymanager.currencies" />
       <option name="MAIN_CLASS_NAME" value="edu.uom.currencymanager.currencies.CurrencyDatabaseTest" />
-      <option name="METHOD_NAME" value="checkCurrCodeFailLongTest" />
+      <option name="METHOD_NAME" value="addCurrencyTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CurrencyDatabaseTest.checkCurrCodeFailShortTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CurrencyDatabaseTest.checkCurrCodeSuccsessTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="currencymanager" />
       <extension name="coverage">
         <pattern>
@@ -108,14 +104,14 @@
       </extension>
       <option name="PACKAGE_NAME" value="edu.uom.currencymanager.currencies" />
       <option name="MAIN_CLASS_NAME" value="edu.uom.currencymanager.currencies.CurrencyDatabaseTest" />
-      <option name="METHOD_NAME" value="checkCurrCodeFailShortTest" />
+      <option name="METHOD_NAME" value="checkCurrCodeSuccsessTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CurrencyDatabaseTest.checkCurrCodeSuccsess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CurrencyDatabaseTest.checkCurrExistsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="currencymanager" />
       <extension name="coverage">
         <pattern>
@@ -125,14 +121,14 @@
       </extension>
       <option name="PACKAGE_NAME" value="edu.uom.currencymanager.currencies" />
       <option name="MAIN_CLASS_NAME" value="edu.uom.currencymanager.currencies.CurrencyDatabaseTest" />
-      <option name="METHOD_NAME" value="checkCurrCodeSuccsess" />
+      <option name="METHOD_NAME" value="checkCurrExistsTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReaderWriterTest.fileParserEmptyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CurrencyDatabaseTest.checkCurrNameSuccsessLenghtEqualTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="currencymanager" />
       <extension name="coverage">
         <pattern>
@@ -141,15 +137,15 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="edu.uom.currencymanager.currencies" />
-      <option name="MAIN_CLASS_NAME" value="edu.uom.currencymanager.currencies.ReaderWriterTest" />
-      <option name="METHOD_NAME" value="fileParserEmptyTest" />
+      <option name="MAIN_CLASS_NAME" value="edu.uom.currencymanager.currencies.CurrencyDatabaseTest" />
+      <option name="METHOD_NAME" value="checkCurrNameSuccsessLenghtEqualTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReaderWriterTest.saveToListEmptyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CurrencyDatabaseTest.removeCurrencyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="currencymanager" />
       <extension name="coverage">
         <pattern>
@@ -158,8 +154,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="edu.uom.currencymanager.currencies" />
-      <option name="MAIN_CLASS_NAME" value="edu.uom.currencymanager.currencies.ReaderWriterTest" />
-      <option name="METHOD_NAME" value="saveToListEmptyTest" />
+      <option name="MAIN_CLASS_NAME" value="edu.uom.currencymanager.currencies.CurrencyDatabaseTest" />
+      <option name="METHOD_NAME" value="removeCurrencyTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -193,11 +189,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CurrencyDatabaseTest.checkCurrCodeFailLongTest" />
-        <item itemvalue="JUnit.CurrencyDatabaseTest.checkCurrCodeFailShortTest" />
-        <item itemvalue="JUnit.CurrencyDatabaseTest.checkCurrCodeSuccsess" />
-        <item itemvalue="JUnit.ReaderWriterTest.saveToListEmptyTest" />
-        <item itemvalue="JUnit.ReaderWriterTest.fileParserEmptyTest" />
+        <item itemvalue="JUnit.CurrencyDatabaseTest.removeCurrencyTest" />
+        <item itemvalue="JUnit.CurrencyDatabaseTest.addCurrencyTest" />
+        <item itemvalue="JUnit.CurrencyDatabaseTest.checkCurrExistsTest" />
+        <item itemvalue="JUnit.CurrencyDatabaseTest.checkCurrNameSuccsessLenghtEqualTest" />
+        <item itemvalue="JUnit.CurrencyDatabaseTest.checkCurrCodeSuccsessTest" />
       </list>
     </recent_temporary>
   </component>
@@ -256,26 +252,26 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1127" y="220" key="#xdebugger.evaluate/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577117504450" />
-    <state width="1877" height="220" key="GridCell.Tab.0.bottom" timestamp="1577121477759">
+    <state width="1877" height="220" key="GridCell.Tab.0.bottom" timestamp="1577122811653">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1312" height="434" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1576081017095" />
-    <state width="1877" height="220" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577121477759" />
-    <state width="1877" height="220" key="GridCell.Tab.0.center" timestamp="1577121477759">
+    <state width="1877" height="220" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577122811653" />
+    <state width="1877" height="220" key="GridCell.Tab.0.center" timestamp="1577122811652">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1312" height="434" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1576081017095" />
-    <state width="1877" height="220" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577121477759" />
-    <state width="1877" height="220" key="GridCell.Tab.0.left" timestamp="1577121477759">
+    <state width="1877" height="220" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577122811652" />
+    <state width="1877" height="220" key="GridCell.Tab.0.left" timestamp="1577122811652">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1312" height="434" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1576081017095" />
-    <state width="1877" height="220" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577121477759" />
-    <state width="1877" height="220" key="GridCell.Tab.0.right" timestamp="1577121477759">
+    <state width="1877" height="220" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577122811652" />
+    <state width="1877" height="220" key="GridCell.Tab.0.right" timestamp="1577122811653">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1312" height="434" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1576081017095" />
-    <state width="1877" height="220" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577121477759" />
+    <state width="1877" height="220" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577122811653" />
     <state width="1312" height="324" key="GridCell.Tab.1.bottom" timestamp="1576081012414">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
@@ -324,13 +320,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/edu/uom/currencymanager/currencies/ReaderWriter.java</url>
-          <line>119</line>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/edu/uom/currencymanager/currencies/ReaderWriter.java</url>
           <line>152</line>
           <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/edu/uom/currencymanager/currencies/Utilities.java</url>
+          <line>7</line>
+          <option name="timeStamp" value="35" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
