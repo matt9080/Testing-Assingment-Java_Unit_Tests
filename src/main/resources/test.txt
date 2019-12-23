@@ -1,2 +1,0 @@
-code,name,major
-hdi,wqdd,yes

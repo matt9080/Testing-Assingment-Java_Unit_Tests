@@ -1,10 +1,6 @@
 code,name,major
-<<<<<<< Updated upstream
-hdi,wqdd,yes
-=======
 AUD,Australian Dollar,no
 EUR,Euro,yes
 GBP,British Pound,yes
 TRY,Turkish Lira,no
 USD,US Dollar,yes
->>>>>>> Stashed changes
