@@ -47,7 +47,7 @@ public class CurrencyManager {
                     break;
 
                 case 4:
-
+                    
             }
         }
 

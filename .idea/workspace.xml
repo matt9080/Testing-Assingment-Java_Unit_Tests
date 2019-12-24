@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da127f51-480e-4c33-88b8-e3246144fed2" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/edu/uom/currencymanager/currencies/UtilitiesTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uom/currencymanager/CurrencyManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/uom/currencymanager/CurrencyManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/uom/currencymanager/currencies/CurrencyDatabaseUpdated.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/uom/currencymanager/currencies/CurrencyDatabaseUpdated.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/edu/uom/currencymanager/currencies/CurrencyDatabaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/uom/currencymanager/currencies/CurrencyDatabaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uom/currencymanager/currencies/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/uom/currencymanager/currencies/Utilities.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/edu/uom/currencymanager/currencies/CurrencyDatabaseUpdated.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/uom/currencymanager/currencies/CurrencyDatabaseUpdated.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/uom/currencymanager/currencies/Utilities.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/uom/currencymanager/currencies/Utilities.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/test.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/edu/uom/currencymanager/currencies/CurrencyDatabaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/edu/uom/currencymanager/currencies/CurrencyDatabaseTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +68,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
   </component>
-  <component name="RunManager" selected="JUnit.CurrencyDatabaseTest.removeCurrencyTest">
+  <component name="RunManager" selected="JUnit.UtilitiesTest.getExchangeRateNoExchangeRate">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -77,7 +81,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CurrencyDatabaseTest.addCurrencyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UtilitiesTest.checkExchangeRateNoExchangeRateTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="currencymanager" />
       <extension name="coverage">
         <pattern>
@@ -86,15 +90,15 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="edu.uom.currencymanager.currencies" />
-      <option name="MAIN_CLASS_NAME" value="edu.uom.currencymanager.currencies.CurrencyDatabaseTest" />
-      <option name="METHOD_NAME" value="addCurrencyTest" />
+      <option name="MAIN_CLASS_NAME" value="edu.uom.currencymanager.currencies.UtilitiesTest" />
+      <option name="METHOD_NAME" value="checkExchangeRateNoExchangeRateTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CurrencyDatabaseTest.checkCurrCodeSuccsessTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UtilitiesTest.checkExchangeRateSuccsessTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="currencymanager" />
       <extension name="coverage">
         <pattern>
@@ -103,15 +107,15 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="edu.uom.currencymanager.currencies" />
-      <option name="MAIN_CLASS_NAME" value="edu.uom.currencymanager.currencies.CurrencyDatabaseTest" />
-      <option name="METHOD_NAME" value="checkCurrCodeSuccsessTest" />
+      <option name="MAIN_CLASS_NAME" value="edu.uom.currencymanager.currencies.UtilitiesTest" />
+      <option name="METHOD_NAME" value="checkExchangeRateSuccsessTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CurrencyDatabaseTest.checkCurrExistsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UtilitiesTest.getExchangeRateNoExchangeRate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="currencymanager" />
       <extension name="coverage">
         <pattern>
@@ -120,15 +124,15 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="edu.uom.currencymanager.currencies" />
-      <option name="MAIN_CLASS_NAME" value="edu.uom.currencymanager.currencies.CurrencyDatabaseTest" />
-      <option name="METHOD_NAME" value="checkCurrExistsTest" />
+      <option name="MAIN_CLASS_NAME" value="edu.uom.currencymanager.currencies.UtilitiesTest" />
+      <option name="METHOD_NAME" value="getExchangeRateNoExchangeRate" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CurrencyDatabaseTest.checkCurrNameSuccsessLenghtEqualTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UtilitiesTest.getExchangeRateSuccsessTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="currencymanager" />
       <extension name="coverage">
         <pattern>
@@ -137,15 +141,15 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="edu.uom.currencymanager.currencies" />
-      <option name="MAIN_CLASS_NAME" value="edu.uom.currencymanager.currencies.CurrencyDatabaseTest" />
-      <option name="METHOD_NAME" value="checkCurrNameSuccsessLenghtEqualTest" />
+      <option name="MAIN_CLASS_NAME" value="edu.uom.currencymanager.currencies.UtilitiesTest" />
+      <option name="METHOD_NAME" value="getExchangeRateSuccsessTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CurrencyDatabaseTest.removeCurrencyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UtilitiesTest.getMajorCurrenciesNoMajorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="currencymanager" />
       <extension name="coverage">
         <pattern>
@@ -154,8 +158,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="edu.uom.currencymanager.currencies" />
-      <option name="MAIN_CLASS_NAME" value="edu.uom.currencymanager.currencies.CurrencyDatabaseTest" />
-      <option name="METHOD_NAME" value="removeCurrencyTest" />
+      <option name="MAIN_CLASS_NAME" value="edu.uom.currencymanager.currencies.UtilitiesTest" />
+      <option name="METHOD_NAME" value="getMajorCurrenciesNoMajorTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -189,11 +193,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CurrencyDatabaseTest.removeCurrencyTest" />
-        <item itemvalue="JUnit.CurrencyDatabaseTest.addCurrencyTest" />
-        <item itemvalue="JUnit.CurrencyDatabaseTest.checkCurrExistsTest" />
-        <item itemvalue="JUnit.CurrencyDatabaseTest.checkCurrNameSuccsessLenghtEqualTest" />
-        <item itemvalue="JUnit.CurrencyDatabaseTest.checkCurrCodeSuccsessTest" />
+        <item itemvalue="JUnit.UtilitiesTest.getExchangeRateNoExchangeRate" />
+        <item itemvalue="JUnit.UtilitiesTest.getExchangeRateSuccsessTest" />
+        <item itemvalue="JUnit.UtilitiesTest.checkExchangeRateNoExchangeRateTest" />
+        <item itemvalue="JUnit.UtilitiesTest.checkExchangeRateSuccsessTest" />
+        <item itemvalue="JUnit.UtilitiesTest.getMajorCurrenciesNoMajorTest" />
       </list>
     </recent_temporary>
   </component>
@@ -228,6 +232,7 @@
       <workItem from="1572883746836" duration="5564000" />
       <workItem from="1573035267167" duration="3406000" />
       <workItem from="1576074529176" duration="5580000" />
+      <workItem from="1577176467297" duration="4320000" />
     </task>
     <servers />
   </component>
@@ -252,26 +257,26 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1127" y="220" key="#xdebugger.evaluate/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577117504450" />
-    <state width="1877" height="220" key="GridCell.Tab.0.bottom" timestamp="1577122811653">
+    <state width="1877" height="220" key="GridCell.Tab.0.bottom" timestamp="1577180889995">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1312" height="434" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1576081017095" />
-    <state width="1877" height="220" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577122811653" />
-    <state width="1877" height="220" key="GridCell.Tab.0.center" timestamp="1577122811652">
+    <state width="1877" height="220" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577180889995" />
+    <state width="1877" height="220" key="GridCell.Tab.0.center" timestamp="1577180889994">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1312" height="434" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1576081017095" />
-    <state width="1877" height="220" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577122811652" />
-    <state width="1877" height="220" key="GridCell.Tab.0.left" timestamp="1577122811652">
+    <state width="1877" height="220" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577180889994" />
+    <state width="1877" height="220" key="GridCell.Tab.0.left" timestamp="1577180889994">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1312" height="434" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1576081017095" />
-    <state width="1877" height="220" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577122811652" />
-    <state width="1877" height="220" key="GridCell.Tab.0.right" timestamp="1577122811653">
+    <state width="1877" height="220" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577180889994" />
+    <state width="1877" height="220" key="GridCell.Tab.0.right" timestamp="1577180889995">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1312" height="434" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1576081017095" />
-    <state width="1877" height="220" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577122811653" />
+    <state width="1877" height="220" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577180889995" />
     <state width="1312" height="324" key="GridCell.Tab.1.bottom" timestamp="1576081012414">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
@@ -292,24 +297,28 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577115082069" />
+    <state x="631" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1577176468591">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="631" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577176468591" />
     <state x="762" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1577116136384">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="762" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577116136384" />
-    <state x="-999" y="0" width="1006" height="1047" key="dock-window-1" timestamp="1577120451441">
+    <state x="-967" y="0" width="974" height="1047" key="dock-window-1" timestamp="1577177114082">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-283" y="-10" width="1736" height="856" maximized="true" key="dock-window-1/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1576075474325" />
-    <state x="-999" y="0" width="1006" height="1047" key="dock-window-1/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577120451441" />
+    <state x="-967" y="0" width="974" height="1047" key="dock-window-1/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577177114082" />
     <state x="690" y="276" key="extract.method.dialog" timestamp="1576077336478">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="276" key="extract.method.dialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1576077336478" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1577120575405">
+    <state x="616" y="240" key="run.anything.popup" timestamp="1577177216547">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1576077139366" />
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577120575405" />
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577177216547" />
     <state x="623" y="225" key="search.everywhere.popup" timestamp="1576076320914">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -322,11 +331,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/edu/uom/currencymanager/currencies/ReaderWriter.java</url>
           <line>152</line>
           <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/edu/uom/currencymanager/currencies/Utilities.java</url>
-          <line>7</line>
-          <option name="timeStamp" value="35" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
