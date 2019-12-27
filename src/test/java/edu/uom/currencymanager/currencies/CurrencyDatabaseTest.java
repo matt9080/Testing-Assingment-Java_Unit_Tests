@@ -42,8 +42,8 @@ public class CurrencyDatabaseTest {
     public void setup() throws Exception {  // Setup which initializes required classes, generates a fresh list and populates said list with a fake currency.
         currDB = new CurrencyDatabase();
         currDB.setPath("target" + File.separator + "classes" + File.separator + "test.txt");
-        currDB.currencies = new LinkedList<Currency>();
-        currDB.exchangeRates = new HashMap<String, ExchangeRate>();
+        currDB.setReaderWriter(readerWriter);
+        currDB.setCurrencies(new ArrayList<Currency>());
         MockitoAnnotations.initMocks(this);
 
     }
@@ -54,10 +54,14 @@ public class CurrencyDatabaseTest {
         currency = null;
     }
 
+    @Mock
+    ReaderWriter readerWriter;
+
     @Test
     public void addCurrencyTest() throws Exception { // Test to add a currency
         // Setup - Create new object of type Currency.
         currency = new Currency(CURR_CODE, CURR_NAME, CURR_TRUE);
+        currDB.setReaderWriter(readerWriter);
         // Exercise - Measure the current size of the list and store it as an integer variable.
         int currentSizeOfList = currDB.getCurrencies().size();
         // Exercise use the Currency Database Add Method to add a new currency.
@@ -150,7 +154,7 @@ public class CurrencyDatabaseTest {
         // Setup - Create 2 new Currencies
         Currency currency_2 = new Currency(CURR_CODE_2,CURR_NAME_2,true);
         Currency currency = new Currency(CURR_CODE,CURR_NAME,true);
-
+        currDB.setReaderWriter(readerWriter);
         List<Currency> currencies = new LinkedList<Currency>();
         currencies.add(currency);
         currencies.add(currency_2);
