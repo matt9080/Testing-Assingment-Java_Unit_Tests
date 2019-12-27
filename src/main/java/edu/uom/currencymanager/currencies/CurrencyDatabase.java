@@ -126,7 +126,4 @@ public class CurrencyDatabase {
         //Persist
         readerWriter.saveListToFile(currencies);
     }
-
-
-
 }
