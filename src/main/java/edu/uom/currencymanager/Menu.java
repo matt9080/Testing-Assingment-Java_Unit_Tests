@@ -2,7 +2,10 @@ package edu.uom.currencymanager;
 
 import edu.uom.currencymanager.currencies.Currency;
 import edu.uom.currencymanager.currencies.CurrencyDatabase;
+import edu.uom.currencymanager.currencies.ExchangeRate;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Menu {
@@ -125,5 +128,59 @@ public class Menu {
         //Add currency to database
         currencyDatabase.addCurrency(new Currency(code,name,major));
 
+    }
+
+    public void checkExchangeRateMenu(){
+        System.out.print("\nEnter source currency code (e.g. EUR): ");
+        String src = sc.next().toUpperCase();
+        System.out.print("\nEnter destination currency code (e.g. GBP): ");
+        String dst = sc.next().toUpperCase();
+
+        checkExchangeRate(src,dst);
+    }
+    public void checkExchangeRate(String src,String dst){
+
+        try {
+            ExchangeRate rate = getExchangeRate(src, dst);
+            System.out.println(rate.toString());
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    public ExchangeRate getExchangeRate(String sourceCurrency, String destinationCurrency) throws Exception {
+        return currencyDatabase.getExchangeRate(sourceCurrency, destinationCurrency);
+    }
+
+    public void getAllCurrencies (){
+        List<Currency> currencies = currencyDatabase.getCurrencies();
+        System.out.println("\nAvailable Currencies\n--------------------");
+        for (Currency currency : currencies) {
+            System.out.println(currency.toString());
+        }
+    }
+
+    public void getExchangeRates() throws Exception {
+        List<ExchangeRate> exchangeRates = getMajorCurrencyRates();
+        System.out.println("\nMajor Currency Exchange Rates\n-----------------------------");
+        for (ExchangeRate rate : exchangeRates) {
+            System.out.println(rate.toString());
+        }
+    }
+
+    public List<ExchangeRate> getMajorCurrencyRates() throws Exception {
+
+        List<ExchangeRate> exchangeRates = new ArrayList<ExchangeRate>();
+
+        List<Currency> currencies = currencyDatabase.getMajorCurrencies();
+
+        for (Currency src : currencies) {
+            for (Currency dst : currencies) {
+                if (src != dst) {
+                    exchangeRates.add(currencyDatabase.getExchangeRate(src.code, dst.code));
+                }
+            }
+        }
+        return exchangeRates;
     }
 }

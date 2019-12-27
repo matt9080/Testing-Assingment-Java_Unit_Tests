@@ -240,7 +240,7 @@
       <workItem from="1573312983881" duration="593000" />
       <workItem from="1575807755571" duration="2172000" />
       <workItem from="1575825157404" duration="149000" />
-      <workItem from="1577435618486" duration="330000" />
+      <workItem from="1577435618486" duration="963000" />
     </task>
     <servers />
   </component>
@@ -284,6 +284,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="801" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577435646107" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1577436727951">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577436727951" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
