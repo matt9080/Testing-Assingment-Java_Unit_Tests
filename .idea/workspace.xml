@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da127f51-480e-4c33-88b8-e3246144fed2" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/uom/currencymanager/currencies/ReaderWriter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/uom/currencymanager/currencies/Utilities.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/edu/uom/currencymanager/currencies/MenuTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/uom/currencymanager/currencies/MenuTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uom/currencymanager/currencies/CurrencyDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/uom/currencymanager/currencies/CurrencyDatabase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -250,7 +248,7 @@
       <workItem from="1573312983881" duration="593000" />
       <workItem from="1575807755571" duration="2172000" />
       <workItem from="1575825157404" duration="149000" />
-      <workItem from="1577435618486" duration="1327000" />
+      <workItem from="1577435618486" duration="1386000" />
     </task>
     <servers />
   </component>

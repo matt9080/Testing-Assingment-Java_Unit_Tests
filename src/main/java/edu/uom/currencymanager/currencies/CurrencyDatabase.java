@@ -6,57 +6,33 @@ import edu.uom.currencymanager.currencyserver.DefaultCurrencyServer;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 
 public class CurrencyDatabase {
 
-    CurrencyServer currencyServer;
+    CurrencyServer currencyServer = new DefaultCurrencyServer();
     List<Currency> currencies = new ArrayList<Currency>();
     HashMap<String, ExchangeRate> exchangeRates = new HashMap<String, ExchangeRate>();
 
-    String currenciesFile = "target" + File.separator + "classes" + File.separator + "currencies.txt";
+    String path = "target" + File.separator + "classes" + File.separator + "currencies.txt";
+    ReaderWriter readerWriter;
 
     public CurrencyDatabase() throws Exception {
-        init();
+        readerWriter = new ReaderWriter(path);
+        currencies = readerWriter.read();
     }
 
-    public void init() throws Exception {
-        //Initialise currency server
-        currencyServer = new DefaultCurrencyServer();
+    public void setCurrencies(List<Currency> currencies) {
+        this.currencies = currencies;
+    }
 
-        //Read in supported currencies from text file
-        BufferedReader reader = new BufferedReader(new FileReader(currenciesFile));
+    public void setPath(String path) {
+        this.path = path;
+    }
 
-        //skip the first line to avoid header
-        String firstLine = reader.readLine();
-        if (!firstLine.equals("code,name,major")) {
-            throw new Exception("Parsing error when reading currencies file.");
-        }
-
-        while (reader.ready()) {
-            String  nextLine = reader.readLine();
-
-            //Check if line has 2 commas
-            int numCommas = 0;
-            char[] chars = nextLine.toCharArray();
-            for (char c : chars) {
-                if (c == ',') numCommas++;
-            }
-
-            if (numCommas != 2) {
-                throw new Exception("Parsing error: expected two commas in line " + nextLine);
-            }
-
-            Currency currency = Currency.fromString(nextLine);
-
-            if (currency.code.length() == 3) {
-                if (!currencyExists(currency.code)) {
-                    currencies.add(currency);
-                }
-            } else {
-                System.err.println("Invalid currency code detected: " + currency.code);
-            }
-        }
+    public void setReaderWriter(ReaderWriter readerWriter) {
+        this.readerWriter = readerWriter;
     }
 
     public Currency getCurrencyByCode(String code) {
@@ -90,6 +66,10 @@ public class CurrencyDatabase {
         return result;
     }
 
+    public void setCurrencyServer(CurrencyServer currencyServer) {
+        this.currencyServer = currencyServer;
+    }
+
     public ExchangeRate getExchangeRate(String sourceCurrencyCode, String destinationCurrencyCode) throws  Exception {
         long FIVE_MINUTES_IN_MILLIS = 300000;  //5*60*100
 
@@ -97,12 +77,12 @@ public class CurrencyDatabase {
 
         Currency sourceCurrency = getCurrencyByCode(sourceCurrencyCode);
         if (sourceCurrency == null) {
-            throw new Exception("Unkown currency: " + sourceCurrencyCode);
+            throw new Exception("Unkown Source currency: " + sourceCurrencyCode);
         }
 
         Currency destinationCurrency = getCurrencyByCode(destinationCurrencyCode);
         if (destinationCurrency == null) {
-            throw new Exception("Unkown currency: " + destinationCurrencyCode);
+            throw new Exception("Unkown Destination currency: " + destinationCurrencyCode);
         }
 
         //Check if exchange rate exists in database
@@ -135,7 +115,7 @@ public class CurrencyDatabase {
         currencies.add(currency);
 
         //Persist
-        persist();
+        readerWriter.saveListToFile(currencies);
     }
 
     public void deleteCurrency(String code) throws Exception {
@@ -144,22 +124,9 @@ public class CurrencyDatabase {
         currencies.remove(getCurrencyByCode(code));
 
         //Persist
-        persist();
+        readerWriter.saveListToFile(currencies);
     }
 
-    public void persist() throws Exception {
 
-        //Persist list
-        BufferedWriter writer = new BufferedWriter(new FileWriter(currenciesFile));
-
-        writer.write("code,name,major\n");
-        for (Currency currency : currencies) {
-            writer.write(currency.code + "," + currency.name + "," + (currency.major ? "yes" : "no"));
-            writer.newLine();
-        }
-
-        writer.flush();
-        writer.close();
-    }
 
 }
