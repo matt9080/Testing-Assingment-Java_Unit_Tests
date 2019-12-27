@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da127f51-480e-4c33-88b8-e3246144fed2" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/edu/uom/currencymanager/currencies/MenuTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/uom/currencymanager/currencies/ReaderWriter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/uom/currencymanager/currencies/Utilities.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/edu/uom/currencymanager/currencies/MenuTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/uom/currencymanager/currencies/MenuTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +61,11 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="project.propDebugger" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="edu.uom.currencymanager.currencies" />
+    </key>
   </component>
   <component name="RunManager" selected="JUnit.MenuTests">
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -244,41 +250,9 @@
       <workItem from="1573312983881" duration="593000" />
       <workItem from="1575807755571" duration="2172000" />
       <workItem from="1575825157404" duration="149000" />
-      <workItem from="1577435618486" duration="1201000" />
+      <workItem from="1577435618486" duration="1327000" />
     </task>
     <servers />
-  </component>
-  <component name="TestHistory">
-    <history-entry file="CurrencyDatabaseTest_and_3_more - 2019.12.08 at 13h 42m 11s.xml">
-      <configuration name="CurrencyDatabaseTest and 3 more" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CurrencyDatabaseTest_and_3_more - 2019.12.08 at 13h 43m 37s.xml">
-      <configuration name="CurrencyDatabaseTest and 3 more" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CurrencyDatabaseTest_and_3_more - 2019.12.08 at 13h 46m 30s.xml">
-      <configuration name="CurrencyDatabaseTest and 3 more" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CurrencyDatabaseTest_and_3_more - 2019.12.08 at 13h 46m 59s.xml">
-      <configuration name="CurrencyDatabaseTest and 3 more" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CurrencyManagerTest_addCurrencySuccessTest - 2019.12.08 at 13h 42m 57s.xml">
-      <configuration name="CurrencyManagerTest.addCurrencySuccessTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ExchangeRateTestr_exchangeRateCreationTest - 2019.12.08 at 13h 32m 37s.xml">
-      <configuration name="ExchangeRateTestr.exchangeRateCreationTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ExchangeRateTestr_exchangeRateCreationTest - 2019.12.08 at 13h 33m 42s.xml">
-      <configuration name="ExchangeRateTestr.exchangeRateCreationTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ExchangeRateTestr_exchangeRateCreationTest - 2019.12.08 at 13h 41m 28s.xml">
-      <configuration name="ExchangeRateTestr.exchangeRateCreationTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ExchangeRateTestr_exchangeRateCreationTest - 2019.12.08 at 13h 42m 00s.xml">
-      <configuration name="ExchangeRateTestr.exchangeRateCreationTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ExchangeRateTestr_toStringSuccessTest - 2019.11.09 at 16h 36m 04s.xml">
-      <configuration name="ExchangeRateTestr.toStringSuccessTest" configurationId="JUnit" />
-    </history-entry>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -288,6 +262,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="801" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577435646107" />
+    <state width="1877" height="392" key="GridCell.Tab.0.bottom" timestamp="1577437055916">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="392" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577437055916" />
+    <state width="1877" height="392" key="GridCell.Tab.0.center" timestamp="1577437055916">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="392" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577437055916" />
+    <state width="1877" height="392" key="GridCell.Tab.0.left" timestamp="1577437055916">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="392" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577437055916" />
+    <state width="1877" height="392" key="GridCell.Tab.0.right" timestamp="1577437055916">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="392" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1577437055916" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1577436727951">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

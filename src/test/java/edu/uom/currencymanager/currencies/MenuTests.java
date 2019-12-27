@@ -107,4 +107,51 @@ public class MenuTests {
             assertEquals(errorCode, e.getMessage());
         }
     }
+
+    @Test
+    public void addCurrencySuccess() throws Exception {
+        menu.setCurrencyDatabase(currencyDatabase);
+        String code = "pop", name = "name";
+        doReturn(false).when(currencyDatabase).currencyExists(anyString());
+
+        menu.addCurrency(code,name,true);
+
+        verify(currencyDatabase,times(1)).addCurrency(any(Currency.class));
+    }
+
+    @Test
+    public void checkExchangeRateMethodCall() throws Exception {
+        menu.setCurrencyDatabase(currencyDatabase);
+        menu.checkExchangeRate("qwe","asd");
+        verify(currencyDatabase,times(1)).getExchangeRate(anyString(),anyString());
+    }
+
+    @Test
+    public void getMajorCurrencyRatesTest() throws Exception {
+        menu.setCurrencyDatabase(currencyDatabase);
+        List<Currency> currencies = new LinkedList<Currency>();
+        currencies.add(new Currency("cod","name",true));
+        currencies.add(new Currency("qwe","nawe",true));
+        ExchangeRate exchangeRate = new ExchangeRate(new Currency("cod","name",true),new Currency("qwe","nawe",true),0.2);
+        doReturn(currencies).when(currencyDatabase).getMajorCurrencies();
+        doReturn(currencies).when(currencyDatabase).getMajorCurrencies();
+        doReturn(exchangeRate).when(currencyDatabase).getExchangeRate(anyString(),anyString());
+        menu.getMajorCurrencyRates();
+
+        assertEquals(exchangeRate,menu.getMajorCurrencyRates().get(0));
+    }
+
+    @Test
+    public void getAllCurrenciesCallTest(){
+        menu.setCurrencyDatabase(currencyDatabase);
+        menu.getAllCurrencies();
+        verify(currencyDatabase,times(1)).getCurrencies();
+    }
+
+    @Test
+    public void getExchangeRatesCallTest() throws Exception {
+        menu.setCurrencyDatabase(currencyDatabase);
+        menu.getExchangeRates();
+        verify(currencyDatabase,times(1)).getMajorCurrencies();
+    }
 }
