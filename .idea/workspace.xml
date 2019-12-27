@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da127f51-480e-4c33-88b8-e3246144fed2" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/edu/uom/currencymanager/currencies/MenuTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uom/currencymanager/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/uom/currencymanager/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,27 +61,13 @@
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="project.propDebugger" />
   </component>
-  <component name="RunManager" selected="JUnit.CurrencyDatabaseTest and 3 more">
+  <component name="RunManager" selected="JUnit.MenuTests">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <option name="WIDTH" value="0" />
       <option name="HEIGHT" value="0" />
       <module />
       <method>
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ExchangeRateTestr" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="edu.uom.currencymanager.currencies.ExchangeRateTestr" />
-      <module name="currencymanager" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="edu.uom.currencymanager.currencies.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
@@ -159,6 +146,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MenuTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="currencymanager" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.uom.currencymanager.currencies.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.uom.currencymanager.currencies" />
+      <option name="MAIN_CLASS_NAME" value="edu.uom.currencymanager.currencies.MenuTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
@@ -187,19 +191,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.ExchangeRateTestr" />
       <item itemvalue="JUnit.ExchangeRateTestr.toStringSuccessTest" />
       <item itemvalue="JUnit.ExchangeRateTestr.exchangeRateCreationTest" />
       <item itemvalue="JUnit.CurrencyDatabaseTest and 3 more" />
       <item itemvalue="JUnit.CurrencyManagerTest.addCurrencySuccessTest" />
+      <item itemvalue="JUnit.MenuTests" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MenuTests" />
         <item itemvalue="JUnit.CurrencyDatabaseTest and 3 more" />
         <item itemvalue="JUnit.CurrencyManagerTest.addCurrencySuccessTest" />
         <item itemvalue="JUnit.ExchangeRateTestr.exchangeRateCreationTest" />
         <item itemvalue="JUnit.ExchangeRateTestr.toStringSuccessTest" />
-        <item itemvalue="Application.ExchangeRateTestr" />
       </list>
     </recent_temporary>
   </component>
@@ -240,7 +244,7 @@
       <workItem from="1573312983881" duration="593000" />
       <workItem from="1575807755571" duration="2172000" />
       <workItem from="1575825157404" duration="149000" />
-      <workItem from="1577435618486" duration="963000" />
+      <workItem from="1577435618486" duration="1201000" />
     </task>
     <servers />
   </component>
