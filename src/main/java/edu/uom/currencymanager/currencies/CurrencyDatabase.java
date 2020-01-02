@@ -4,10 +4,7 @@ import edu.uom.currencymanager.currencyserver.CurrencyServer;
 import edu.uom.currencymanager.currencyserver.DefaultCurrencyServer;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class CurrencyDatabase {
 
@@ -18,15 +15,16 @@ public class CurrencyDatabase {
     String path = "target" + File.separator + "classes" + File.separator + "currencies.txt";
     ReaderWriter readerWriter;
 
-    public CurrencyDatabase() throws Exception {
-        readerWriter = new ReaderWriter(path);
-        currencies = readerWriter.read();
+    public CurrencyDatabase(ReaderWriter readerWriter) throws Exception {
+        this.readerWriter = readerWriter;
     }
 
     public void setCurrencies(List<Currency> currencies) {
         this.currencies = currencies;
     }
-
+    public void initilizeList(){
+        currencies = readerWriter.read();
+    }
     public void setPath(String path) {
         this.path = path;
     }
@@ -95,6 +93,7 @@ public class CurrencyDatabase {
         }
 
         if (result == null) {
+            currencyServer.setSeed(new Random().nextInt());
             double rate = currencyServer.getExchangeRate(sourceCurrencyCode, destinationCurrencyCode);
             result = new ExchangeRate(sourceCurrency,destinationCurrency, rate);
 

@@ -1,8 +1,10 @@
 code,name,major
-AUD,Australian Dollar,no
-EUR,Euro,yes
-GBP,British Pound,yes
-TRY,Turkish Lira,no
-USD,US Dollar,yes
-TES,TESTING,yes
-
+AUD,Australian Dollar,false
+EUR,Euro,true
+GBP,British Pound,true
+TRY,Turkish Lira,false
+USD,US Dollar,true
+TES,TESTING,true
+ZAM,ZAMMY,true
+KIK,kikina,true
+IOL,iola,true

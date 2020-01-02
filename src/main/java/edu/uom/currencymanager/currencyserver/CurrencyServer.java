@@ -9,5 +9,5 @@ public interface CurrencyServer {
      * @return The exchange rate from source currency to destination currency.
      */
     public double getExchangeRate(String sourceCurrency, String destinationCurrency);
-
+    public void setSeed(int seed);
 }

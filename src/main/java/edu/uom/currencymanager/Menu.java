@@ -3,8 +3,11 @@ package edu.uom.currencymanager;
 import edu.uom.currencymanager.currencies.Currency;
 import edu.uom.currencymanager.currencies.CurrencyDatabase;
 import edu.uom.currencymanager.currencies.ExchangeRate;
+import edu.uom.currencymanager.currencies.ReaderWriter;
 
+import java.io.File;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -12,10 +15,13 @@ public class Menu {
 
     CurrencyDatabase currencyDatabase;
     Scanner sc = new Scanner(System.in);
+    String path = "target" + File.separator + "classes" + File.separator + "currencies.txt";
+    ReaderWriter readerWriter = new ReaderWriter(path);
+    List<Currency> currencies = new ArrayList<Currency>();
 
     public Menu() throws Exception {
-        currencyDatabase = new CurrencyDatabase();
-
+        currencyDatabase = new CurrencyDatabase(readerWriter);
+        currencyDatabase.initilizeList();
     }
 
     public void setCurrencyDatabase(CurrencyDatabase currencyDatabase) {

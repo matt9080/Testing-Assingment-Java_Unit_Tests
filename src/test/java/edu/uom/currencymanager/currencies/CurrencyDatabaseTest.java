@@ -38,11 +38,13 @@ public class CurrencyDatabaseTest {
     CurrencyDatabase currDB;
     Currency currency;
 
+    @Mock
+    ReaderWriter readerWriter;
+
     @Before
     public void setup() throws Exception {  // Setup which initializes required classes, generates a fresh list and populates said list with a fake currency.
-        currDB = new CurrencyDatabase();
+        currDB = new CurrencyDatabase(readerWriter);
         currDB.setPath("target" + File.separator + "classes" + File.separator + "test.txt");
-        currDB.setReaderWriter(readerWriter);
         currDB.setCurrencies(new ArrayList<Currency>());
         MockitoAnnotations.initMocks(this);
 
@@ -52,20 +54,22 @@ public class CurrencyDatabaseTest {
     public void tearDown(){ // Nullifies the currDB class.
         currDB = null;
         currency = null;
+        readerWriter = null;
     }
 
-    @Mock
-    ReaderWriter readerWriter;
+
 
     @Test
     public void addCurrencyTest() throws Exception { // Test to add a currency
         // Setup - Create new object of type Currency.
-        currency = new Currency(CURR_CODE, CURR_NAME, CURR_TRUE);
         currDB.setReaderWriter(readerWriter);
+        currency = new Currency(CURR_CODE, CURR_NAME, CURR_TRUE);
+//        currDB.setReaderWriter(readerWriter);
         // Exercise - Measure the current size of the list and store it as an integer variable.
         int currentSizeOfList = currDB.getCurrencies().size();
         // Exercise use the Currency Database Add Method to add a new currency.
         currDB.addCurrency(currency);
+//        doReturn(any()).when(readerWriter).saveListToFile(anyList());
         // Verify - Assert that the size of the list before addition is equal to the current size of the list + 1.
         assertEquals(currentSizeOfList + 1, currDB.currencies.size());
         // Teardown - Remove currency from the list.
@@ -95,10 +99,10 @@ public class CurrencyDatabaseTest {
 
     @Test
     public void currencyExistsSuccess() {   // Test to check if currency exists, mocks getCurrencyByCode method.
-        // Setup - Creating an instance of the Currency Database class with a Spy.
-        CurrencyDatabase currDB = spy(CurrencyDatabase.class);
-        // Setup - The currencyExists method call the getCurrencyByCode method, in order for the test to be focused on the currencyExists method then, the return result of getCurrencyByCode is pre-determined.
-        doReturn(currency = new Currency(CURR_CODE,CURR_NAME,true)).when(currDB).getCurrencyByCode(CURR_CODE);
+        Currency currency = new Currency(CURR_CODE,CURR_NAME,true);
+        List<Currency> currencies = new LinkedList<Currency>();
+        currencies.add(currency);
+        currDB.setCurrencies(currencies);
         // Verify - Asserts that currencyExists returns true, if a currency with matching currency code is found.
         assertTrue(currDB.currencyExists(CURR_CODE));
     }
@@ -150,20 +154,20 @@ public class CurrencyDatabaseTest {
     @Test
     public void deleteCurrencySuccessTest() throws Exception { // To Test if a successful deletion occurs.
         // Setup - Create an instance of the CurrencyDatabase class with a Spy.
-        CurrencyDatabase currDB = spy(CurrencyDatabase.class);
+        currDB.setReaderWriter(readerWriter);
         // Setup - Create 2 new Currencies
         Currency currency_2 = new Currency(CURR_CODE_2,CURR_NAME_2,true);
         Currency currency = new Currency(CURR_CODE,CURR_NAME,true);
-        currDB.setReaderWriter(readerWriter);
+       // currDB.setReaderWriter(readerWriter);
         List<Currency> currencies = new LinkedList<Currency>();
         currencies.add(currency);
         currencies.add(currency_2);
         currDB.setCurrencies(currencies);
 
         // Setup - Since the delete method call the getCurrencyByCode method, then the return is pre-determined.
-        doReturn(currency_2).when(currDB).getCurrencyByCode(currency_2.code);
+//        doReturn(currency_2).when(currDB).getCurrencyByCode(currency_2.code);
         // Setup - Store the current size of currencies list within an integer variable.
-        int sizeBeforeDelete = currDB.currencies.size();
+        int sizeBeforeDelete = currDB.getCurrencies().size();
         // Exercise - Call the deleteCurrency method, passing the currency code of one of the newly created currencies.
         currDB.deleteCurrency(currency_2.code);
         // Verify - Assert that the current size of the list is the equal to the previous size - 1.
@@ -175,13 +179,15 @@ public class CurrencyDatabaseTest {
     @Test
     public void getExchangeRateUnknownSourceCurrencyTest() { // To Test the getExchangeRate method when the source currency does not exist.
         // Setup - Creating a new instance of the currency database class using a Spy.
-        CurrencyDatabase currDB = spy(CurrencyDatabase.class);
+//        currDB.setReaderWriter(readerWriter);
+
+        CurrencyDatabase currDBspy = spy(currDB);
         // Setup - Pre determining return value for getCurrencyByCode, for the source currency(CURR_CODE_2) null is being returned.
-        doReturn(new Currency(CURR_CODE, CURR_NAME, CURR_FALSE)).when(currDB).getCurrencyByCode(CURR_CODE);
-        doReturn(null).when(currDB).getCurrencyByCode(CURR_CODE_2);
+        doReturn(new Currency(CURR_CODE, CURR_NAME, CURR_FALSE)).when(currDBspy).getCurrencyByCode(CURR_CODE);
+        doReturn(null).when(currDBspy).getCurrencyByCode(CURR_CODE_2);
         // Exercise - Calling the getExchangeRate method, and catching exception
         try {
-            currDB.getExchangeRate(CURR_CODE_2, CURR_CODE);
+            currDBspy.getExchangeRate(CURR_CODE_2, CURR_CODE);
         } catch (Exception exception) {
             // Verify - Assert that the exception message returned is equal to our expected message.
             assertEquals("Unkown Source currency: "+CURR_CODE_2, exception.getMessage());
@@ -191,13 +197,13 @@ public class CurrencyDatabaseTest {
     @Test
     public void getExchangeRateUnknownDestinationCurrencyTest() { // To Test the getExchangeRate method when the destination currency does not exist.
         // Setup - Creating a new instance of the currency database class using a Spy.
-        CurrencyDatabase currDB = spy(CurrencyDatabase.class);
+        CurrencyDatabase currDBspy = spy(currDB);
         // Setup - Pre determining return value for getCurrencyByCode, for the destination currency(CURR_CODE_2) null is being returned.
-        doReturn(new Currency(CURR_CODE, CURR_NAME, CURR_FALSE)).when(currDB).getCurrencyByCode(CURR_CODE);
-        doReturn(null).when(currDB).getCurrencyByCode(CURR_CODE_2);
+        doReturn(new Currency(CURR_CODE, CURR_NAME, CURR_FALSE)).when(currDBspy).getCurrencyByCode(CURR_CODE);
+        doReturn(null).when(currDBspy).getCurrencyByCode(CURR_CODE_2);
         // Exercise - Calling the getExchangeRate method, and catching exception
         try {
-            currDB.getExchangeRate(CURR_CODE, CURR_CODE_2);
+            currDBspy.getExchangeRate(CURR_CODE, CURR_CODE_2);
         } catch (Exception exception) {
             // Verify - Assert that the exception message returned is equal to our expected message.
             assertEquals("Unkown Destination currency: "+CURR_CODE_2, exception.getMessage());
@@ -209,20 +215,20 @@ public class CurrencyDatabaseTest {
     @Test
     public void getExchangeRateSuccessReturnRateTest() throws Exception { // To Test the getExchangeRate method when it successfully returns and exchange rate.
         // Setup - Creating a new instance of the currency database class using a Spy.
-        CurrencyDatabase currDB = spy(CurrencyDatabase.class);
-        currDB.setCurrencyServer(currencyServer);
+        CurrencyDatabase currDBspy = spy(currDB);
+        currDBspy.setCurrencyServer(currencyServer);
         // Setup - Creating 2 new currencies and a pre-determined rate of type double.
         double rate = 0.69;
         Currency Source = new Currency(CURR_CODE, CURR_NAME, CURR_FALSE);
         Currency Destination = new Currency(CURR_CODE_2, CURR_NAME_2, CURR_TRUE);
         // Setup - Pre determining return value for getCurrencyByCode.
-        doReturn(Source).when(currDB).getCurrencyByCode(CURR_CODE);
-        doReturn(Destination).when(currDB).getCurrencyByCode(CURR_CODE_2);
+        doReturn(Source).when(currDBspy).getCurrencyByCode(CURR_CODE);
+        doReturn(Destination).when(currDBspy).getCurrencyByCode(CURR_CODE_2);
         when(currencyServer.getExchangeRate(anyString(),anyString())).thenReturn(0.2);
         // Create new exchange rate.
         ExchangeRate exchangeRate = new ExchangeRate(Source, Destination, rate);
         // Exercise - Create new exchange rate equal to return of the getExchangeRateMethod
-        ExchangeRate result = currDB.getExchangeRate(Source.code, Destination.code);
+        ExchangeRate result = currDBspy.getExchangeRate(Source.code, Destination.code);
         result.rate = rate;
         // Verify - Assert that the returned result is equal to our pre-determined string.
         assertEquals(Source.code + " 1 = " + Destination.code +" " + exchangeRate.rate + "", result.toString());
@@ -231,26 +237,26 @@ public class CurrencyDatabaseTest {
     @Test
     public void getExchangeRateTimeExceededTest() throws Exception {
         // Setup - Creating a new instance of the currency database class using a Spy.
-        CurrencyDatabase currDB = spy(CurrencyDatabase.class);
+        CurrencyDatabase currDBspy = spy(currDB);
         // currDB.setCurrencyServer(currencyServer);
         CurrencyServer currencyServer2 = new DefaultCurrencyServer() {
         };
-        currDB.setCurrencyServer(currencyServer2);
+        currDBspy.setCurrencyServer(currencyServer2);
         // Setup - Creating 2 new currencies
         Currency Source = new Currency(CURR_CODE, CURR_NAME, CURR_FALSE);
         Currency Destination = new Currency(CURR_CODE_2, CURR_NAME_2, CURR_TRUE);
         // Setup - Pre determining return value for getCurrencyByCode.
-        doReturn(Source).when(currDB).getCurrencyByCode(CURR_CODE);
-        doReturn(Destination).when(currDB).getCurrencyByCode(CURR_CODE_2);
+        doReturn(Source).when(currDBspy).getCurrencyByCode(CURR_CODE);
+        doReturn(Destination).when(currDBspy).getCurrencyByCode(CURR_CODE_2);
 //        when(currencyServer.getExchangeRate(CURR_CODE,CURR_CODE_2)).thenReturn(0.2);
 //        when(currencyServer.getExchangeRate(CURR_CODE_2,CURR_CODE)).thenReturn(0.3);
 
         // Create new exchange rate.
-        ExchangeRate exchangeRate = currDB.getExchangeRate(Source.code, Destination.code);
+        ExchangeRate exchangeRate = currDBspy.getExchangeRate(Source.code, Destination.code);
         // New value for exchangeRate timeLastChecked, which is the previous timeLastChecked minus a second.
         exchangeRate.timeLastChecked = exchangeRate.timeLastChecked - 600000;
         // Exercise - Create a new exchance rate, using the same source and destination currencies.
-        ExchangeRate exchangeRate1 = currDB.getExchangeRate(Source.code, Destination.code);
+        ExchangeRate exchangeRate1 = currDBspy.getExchangeRate(Source.code, Destination.code);
         // Verify - Assert that even though the exchange rate took in the same source and destination currencies, the rate will be different since it uses system time.
         assertTrue(exchangeRate.rate != exchangeRate1.rate);
     }

@@ -20,7 +20,7 @@ public class Currency {
 
         String code = tokenizer.nextToken();
         String name = tokenizer.nextToken();
-        boolean major = tokenizer.nextToken().equalsIgnoreCase("yes");
+        boolean major = tokenizer.nextToken().equalsIgnoreCase("true");
 
         return new Currency(code,name,major);
     }
