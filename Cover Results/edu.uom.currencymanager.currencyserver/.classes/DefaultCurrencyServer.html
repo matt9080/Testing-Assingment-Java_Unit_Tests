@@ -1,0 +1,99 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: DefaultCurrencyServer</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">edu.uom.currencymanager.currencyserver</a> ]
+</div>
+
+<h1>Coverage Summary for Class: DefaultCurrencyServer (edu.uom.currencymanager.currencyserver)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">DefaultCurrencyServer</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (3/ 3)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (5/ 5)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package edu.uom.currencymanager.currencyserver;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import java.util.Random;
+<i>4</i>&nbsp;
+<b class="fc"><i>5</i>&nbsp;public class DefaultCurrencyServer implements CurrencyServer {</b>
+<i>6</i>&nbsp;    int seed;
+<i>7</i>&nbsp;
+<i>8</i>&nbsp;    public double getExchangeRate(String sourceCurrency, String destinationCurrency) {
+<b class="fc"><i>9</i>&nbsp;        Random random = new Random(seed);</b>
+<b class="fc"><i>10</i>&nbsp;        return random.nextDouble()*1.5; //Generate a random number between 0 and 1.5;</b>
+<i>11</i>&nbsp;    }
+<i>12</i>&nbsp;
+<i>13</i>&nbsp;    public void setSeed(int seed) {
+<b class="fc"><i>14</i>&nbsp;        this.seed = seed;</b>
+<b class="fc"><i>15</i>&nbsp;    }</b>
+<i>16</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2020-01-04 14:46</div>
+</div>
+</body>
+</html>

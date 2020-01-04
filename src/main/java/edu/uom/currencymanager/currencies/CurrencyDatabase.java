@@ -6,7 +6,7 @@ import edu.uom.currencymanager.currencyserver.DefaultCurrencyServer;
 import java.io.*;
 import java.util.*;
 
-public class CurrencyDatabase {
+public class CurrencyDatabase implements CurrencyDatabaseInterface {
 
     CurrencyServer currencyServer = new DefaultCurrencyServer();
     List<Currency> currencies = new ArrayList<Currency>();
