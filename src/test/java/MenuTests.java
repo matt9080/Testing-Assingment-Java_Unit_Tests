@@ -1,6 +1,7 @@
-package edu.uom.currencymanager.currencies;
-
 import edu.uom.currencymanager.Menu;
+import edu.uom.currencymanager.currencies.Currency;
+import edu.uom.currencymanager.currencies.CurrencyDatabase;
+import edu.uom.currencymanager.currencies.ExchangeRate;
 import org.apache.commons.io.output.ByteArrayOutputStream;
 import org.junit.After;
 import org.junit.Before;
@@ -38,6 +39,41 @@ public class MenuTests {
         menu = null;
     }
 
+
+    @Test
+    public void getStringTestOption1(){
+        final String MENU_OPTION_1 = "Dispaying all Currencies";
+
+        assertEquals(MENU_OPTION_1,menu.getStrings(1));
+    }
+
+    @Test
+    public void getStringTestOption2(){
+        final String MENU_OPTION_2 = "Displaying exchange Rates";
+
+        assertEquals(MENU_OPTION_2,menu.getStrings(2));
+    }
+
+    @Test
+    public void getStringTestOption3(){
+        final String MENU_OPTION_3 = "Check Exchange Rate";
+
+        assertEquals(MENU_OPTION_3,menu.getStrings(3));
+    }
+
+    @Test
+    public void getStringTestOption4(){
+        final String MENU_OPTION_4 = "Add Currency";
+
+        assertEquals(MENU_OPTION_4,menu.getStrings(4));
+    }
+
+    @Test
+    public void getStringTestOption5(){
+        final String MENU_OPTION_5 = "Deleting Currency";
+
+        assertEquals(MENU_OPTION_5,menu.getStrings(5));
+    }
 
     @Test
     public void deleteCurrencyFailure() {

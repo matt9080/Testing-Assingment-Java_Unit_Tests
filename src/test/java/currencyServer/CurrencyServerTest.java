@@ -1,9 +1,12 @@
-package edu.uom.currencymanager.currencies;
+package currencyServer;
 
 import edu.uom.currencymanager.currencyserver.DefaultCurrencyServer;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.util.Random;
+
 import static org.junit.Assert.*;
 
 import static org.mockito.Mockito.doReturn;
@@ -29,5 +32,7 @@ public class CurrencyServerTest {
         double test = currencyServer.getExchangeRate("qwe","eqe");
         assertTrue((test < 1.5) && test > 0);
     }
+
+
 
 }

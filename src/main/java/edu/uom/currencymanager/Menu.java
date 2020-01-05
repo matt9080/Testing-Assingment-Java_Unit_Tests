@@ -28,6 +28,29 @@ public class Menu {
         this.currencyDatabase = currencyDatabase;
     }
 
+
+    public String getStrings(int choice){
+        final String MENU_OPTION_1 = "Dispaying all Currencies";
+        final String MENU_OPTION_2 = "Displaying exchange Rates";
+        final String MENU_OPTION_3 = "Check Exchange Rate";
+        final String MENU_OPTION_4 = "Add Currency";
+        final String MENU_OPTION_5 = "Deleting Currency";
+
+        switch(choice) {
+            case 1:
+                return MENU_OPTION_1;
+            case 2:
+                return MENU_OPTION_2;
+            case 3:
+                 return MENU_OPTION_3;
+            case 4:
+                return MENU_OPTION_4;
+            case 5:
+                return MENU_OPTION_5;
+        }
+        return null;
+    }
+
     public void menu() throws Exception {
         boolean exit = false;
 
@@ -50,26 +73,26 @@ public class Menu {
                     break;
 
                 case 1:
-                    System.out.println("Dispaying all Currencies");
+                    System.out.println(getStrings(1));
                     getAllCurrencies();
                     break;
 
                 case 2:
-                    System.out.println("Displaying exchange Rates");
+                    System.out.println(getStrings(2));
                     getExchangeRates();
                     break;
 
                 case 3:
-                    System.out.println("Check Exchange Rate");
+                    System.out.println(getStrings(3));
                     checkExchangeRateMenu();
                     break;
                 case 4:
-                    System.out.println("Add Currency");
+                    System.out.println(getStrings(4));
                     addCurrency_menu();
                     break;
 
                 case 5:
-                    System.out.println("Deleting Currency");
+                    System.out.println(getStrings(5));
                     deleteCurrency_menu();
                     break;
             }
