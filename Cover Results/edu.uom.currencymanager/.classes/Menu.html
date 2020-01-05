@@ -50,18 +50,18 @@
 </td>
 <td class="coverageStat">
   <span class="percent">
-    69.2%
+    71.4%
   </span>
   <span class="absValue">
-    (9/ 13)
+    (10/ 14)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    42.1%
+    47.1%
   </span>
   <span class="absValue">
-    (45/ 107)
+    (56/ 119)
   </span>
 </td>
 </tr>
@@ -102,174 +102,197 @@
 <b class="fc"><i>28</i>&nbsp;        this.currencyDatabase = currencyDatabase;</b>
 <b class="fc"><i>29</i>&nbsp;    }</b>
 <i>30</i>&nbsp;
-<i>31</i>&nbsp;    public void menu() throws Exception {
-<b class="nc"><i>32</i>&nbsp;        boolean exit = false;</b>
-<i>33</i>&nbsp;
-<b class="nc"><i>34</i>&nbsp;        while (!exit) {</b>
-<b class="nc"><i>35</i>&nbsp;            System.out.println(&quot;\nMain Menu\n---------\n&quot;);</b>
-<i>36</i>&nbsp;
-<b class="nc"><i>37</i>&nbsp;            System.out.println(&quot;1. List currencies&quot;);</b>
-<b class="nc"><i>38</i>&nbsp;            System.out.println(&quot;2. List exchange rates between major currencies&quot;);</b>
-<b class="nc"><i>39</i>&nbsp;            System.out.println(&quot;3. Check exchange rate&quot;);</b>
-<b class="nc"><i>40</i>&nbsp;            System.out.println(&quot;4. Add currency&quot;);</b>
-<b class="nc"><i>41</i>&nbsp;            System.out.println(&quot;5. Delete currency&quot;);</b>
-<b class="nc"><i>42</i>&nbsp;            System.out.println(&quot;0. Quit&quot;);</b>
-<i>43</i>&nbsp;
-<b class="nc"><i>44</i>&nbsp;            System.out.print(&quot;\nEnter your choice: &quot;);</b>
-<i>45</i>&nbsp;
-<b class="nc"><i>46</i>&nbsp;            int choice = sc.nextInt();</b>
-<b class="nc"><i>47</i>&nbsp;            switch (choice) {</b>
-<i>48</i>&nbsp;                case 0:
-<b class="nc"><i>49</i>&nbsp;                    exit = true;</b>
-<b class="nc"><i>50</i>&nbsp;                    break;</b>
-<i>51</i>&nbsp;
-<i>52</i>&nbsp;                case 1:
-<b class="nc"><i>53</i>&nbsp;                    System.out.println(&quot;Dispaying all Currencies&quot;);</b>
-<b class="nc"><i>54</i>&nbsp;                    getAllCurrencies();</b>
-<b class="nc"><i>55</i>&nbsp;                    break;</b>
+<i>31</i>&nbsp;
+<i>32</i>&nbsp;    public String getStrings(int choice){
+<b class="fc"><i>33</i>&nbsp;        final String MENU_OPTION_1 = &quot;Dispaying all Currencies&quot;;</b>
+<b class="fc"><i>34</i>&nbsp;        final String MENU_OPTION_2 = &quot;Displaying exchange Rates&quot;;</b>
+<b class="fc"><i>35</i>&nbsp;        final String MENU_OPTION_3 = &quot;Check Exchange Rate&quot;;</b>
+<b class="fc"><i>36</i>&nbsp;        final String MENU_OPTION_4 = &quot;Add Currency&quot;;</b>
+<b class="fc"><i>37</i>&nbsp;        final String MENU_OPTION_5 = &quot;Deleting Currency&quot;;</b>
+<i>38</i>&nbsp;
+<b class="fc"><i>39</i>&nbsp;        switch(choice) {</b>
+<i>40</i>&nbsp;            case 1:
+<b class="fc"><i>41</i>&nbsp;                return MENU_OPTION_1;</b>
+<i>42</i>&nbsp;            case 2:
+<b class="fc"><i>43</i>&nbsp;                return MENU_OPTION_2;</b>
+<i>44</i>&nbsp;            case 3:
+<b class="fc"><i>45</i>&nbsp;                 return MENU_OPTION_3;</b>
+<i>46</i>&nbsp;            case 4:
+<b class="fc"><i>47</i>&nbsp;                return MENU_OPTION_4;</b>
+<i>48</i>&nbsp;            case 5:
+<b class="fc"><i>49</i>&nbsp;                return MENU_OPTION_5;</b>
+<i>50</i>&nbsp;        }
+<b class="nc"><i>51</i>&nbsp;        return null;</b>
+<i>52</i>&nbsp;    }
+<i>53</i>&nbsp;
+<i>54</i>&nbsp;    public void menu() throws Exception {
+<b class="nc"><i>55</i>&nbsp;        boolean exit = false;</b>
 <i>56</i>&nbsp;
-<i>57</i>&nbsp;                case 2:
-<b class="nc"><i>58</i>&nbsp;                    System.out.println(&quot;Displaying exchange Rates&quot;);</b>
-<b class="nc"><i>59</i>&nbsp;                    getExchangeRates();</b>
-<b class="nc"><i>60</i>&nbsp;                    break;</b>
-<i>61</i>&nbsp;
-<i>62</i>&nbsp;                case 3:
-<b class="nc"><i>63</i>&nbsp;                    System.out.println(&quot;Check Exchange Rate&quot;);</b>
-<b class="nc"><i>64</i>&nbsp;                    checkExchangeRateMenu();</b>
-<b class="nc"><i>65</i>&nbsp;                    break;</b>
-<i>66</i>&nbsp;                case 4:
-<b class="nc"><i>67</i>&nbsp;                    System.out.println(&quot;Add Currency&quot;);</b>
-<b class="nc"><i>68</i>&nbsp;                    addCurrency_menu();</b>
-<b class="nc"><i>69</i>&nbsp;                    break;</b>
-<i>70</i>&nbsp;
-<i>71</i>&nbsp;                case 5:
-<b class="nc"><i>72</i>&nbsp;                    System.out.println(&quot;Deleting Currency&quot;);</b>
-<b class="nc"><i>73</i>&nbsp;                    deleteCurrency_menu();</b>
-<i>74</i>&nbsp;                    break;
-<i>75</i>&nbsp;            }
-<b class="nc"><i>76</i>&nbsp;        }</b>
-<b class="nc"><i>77</i>&nbsp;    }</b>
-<i>78</i>&nbsp;
-<i>79</i>&nbsp;    public void deleteCurrency_menu(){
-<b class="nc"><i>80</i>&nbsp;        System.out.print(&quot;\nEnter the currency code: &quot;);</b>
-<b class="nc"><i>81</i>&nbsp;        String code = sc.next().toUpperCase();</b>
-<i>82</i>&nbsp;        try {
-<b class="nc"><i>83</i>&nbsp;            deleteCurrency(code);</b>
-<b class="nc"><i>84</i>&nbsp;        } catch (Exception e) {</b>
-<b class="nc"><i>85</i>&nbsp;            System.err.println(e.getMessage());</b>
-<b class="nc"><i>86</i>&nbsp;        }</b>
-<b class="nc"><i>87</i>&nbsp;    }</b>
-<i>88</i>&nbsp;
-<i>89</i>&nbsp;    public void deleteCurrency(String code) throws Exception {
-<b class="fc"><i>90</i>&nbsp;        if (!currencyDatabase.currencyExists(code)) {</b>
-<b class="fc"><i>91</i>&nbsp;            throw new Exception(&quot;Currency does not exist: &quot; + code);</b>
-<i>92</i>&nbsp;        }
+<b class="nc"><i>57</i>&nbsp;        while (!exit) {</b>
+<b class="nc"><i>58</i>&nbsp;            System.out.println(&quot;\nMain Menu\n---------\n&quot;);</b>
+<i>59</i>&nbsp;
+<b class="nc"><i>60</i>&nbsp;            System.out.println(&quot;1. List currencies&quot;);</b>
+<b class="nc"><i>61</i>&nbsp;            System.out.println(&quot;2. List exchange rates between major currencies&quot;);</b>
+<b class="nc"><i>62</i>&nbsp;            System.out.println(&quot;3. Check exchange rate&quot;);</b>
+<b class="nc"><i>63</i>&nbsp;            System.out.println(&quot;4. Add currency&quot;);</b>
+<b class="nc"><i>64</i>&nbsp;            System.out.println(&quot;5. Delete currency&quot;);</b>
+<b class="nc"><i>65</i>&nbsp;            System.out.println(&quot;0. Quit&quot;);</b>
+<i>66</i>&nbsp;
+<b class="nc"><i>67</i>&nbsp;            System.out.print(&quot;\nEnter your choice: &quot;);</b>
+<i>68</i>&nbsp;
+<b class="nc"><i>69</i>&nbsp;            int choice = sc.nextInt();</b>
+<b class="nc"><i>70</i>&nbsp;            switch (choice) {</b>
+<i>71</i>&nbsp;                case 0:
+<b class="nc"><i>72</i>&nbsp;                    exit = true;</b>
+<b class="nc"><i>73</i>&nbsp;                    break;</b>
+<i>74</i>&nbsp;
+<i>75</i>&nbsp;                case 1:
+<b class="nc"><i>76</i>&nbsp;                    System.out.println(getStrings(1));</b>
+<b class="nc"><i>77</i>&nbsp;                    getAllCurrencies();</b>
+<b class="nc"><i>78</i>&nbsp;                    break;</b>
+<i>79</i>&nbsp;
+<i>80</i>&nbsp;                case 2:
+<b class="nc"><i>81</i>&nbsp;                    System.out.println(getStrings(2));</b>
+<b class="nc"><i>82</i>&nbsp;                    getExchangeRates();</b>
+<b class="nc"><i>83</i>&nbsp;                    break;</b>
+<i>84</i>&nbsp;
+<i>85</i>&nbsp;                case 3:
+<b class="nc"><i>86</i>&nbsp;                    System.out.println(getStrings(3));</b>
+<b class="nc"><i>87</i>&nbsp;                    checkExchangeRateMenu();</b>
+<b class="nc"><i>88</i>&nbsp;                    break;</b>
+<i>89</i>&nbsp;                case 4:
+<b class="nc"><i>90</i>&nbsp;                    System.out.println(getStrings(4));</b>
+<b class="nc"><i>91</i>&nbsp;                    addCurrency_menu();</b>
+<b class="nc"><i>92</i>&nbsp;                    break;</b>
 <i>93</i>&nbsp;
-<b class="fc"><i>94</i>&nbsp;        currencyDatabase.deleteCurrency(code);</b>
-<b class="fc"><i>95</i>&nbsp;    }</b>
-<i>96</i>&nbsp;
-<i>97</i>&nbsp;    public void addCurrency_menu(){
-<b class="nc"><i>98</i>&nbsp;        System.out.print(&quot;\nEnter the currency code: &quot;);</b>
-<b class="nc"><i>99</i>&nbsp;        String code = sc.next().toUpperCase();</b>
-<b class="nc"><i>100</i>&nbsp;        System.out.print(&quot;Enter currency name: &quot;);</b>
-<b class="nc"><i>101</i>&nbsp;        String name = sc.next();</b>
-<b class="nc"><i>102</i>&nbsp;        name += sc.nextLine();</b>
-<i>103</i>&nbsp;
-<b class="nc"><i>104</i>&nbsp;        String major = &quot;\n&quot;;</b>
-<b class="nc"><i>105</i>&nbsp;        while (!(major.equalsIgnoreCase(&quot;y&quot;) || major.equalsIgnoreCase(&quot;n&quot;))) {</b>
-<b class="nc"><i>106</i>&nbsp;            System.out.println(&quot;Is this a major currency? [y/n]&quot;);</b>
-<b class="nc"><i>107</i>&nbsp;            major = sc.next();</b>
-<i>108</i>&nbsp;        }
-<i>109</i>&nbsp;
-<i>110</i>&nbsp;        try {
-<b class="nc"><i>111</i>&nbsp;            addCurrency(code, name, major.equalsIgnoreCase(&quot;y&quot;));</b>
-<b class="nc"><i>112</i>&nbsp;        } catch (Exception e) {</b>
-<b class="nc"><i>113</i>&nbsp;            System.err.println(e.getMessage());</b>
-<b class="nc"><i>114</i>&nbsp;        }</b>
-<i>115</i>&nbsp;
-<b class="nc"><i>116</i>&nbsp;    }</b>
-<i>117</i>&nbsp;
-<i>118</i>&nbsp;    public void addCurrency(String code, String name, boolean major) throws Exception {
+<i>94</i>&nbsp;                case 5:
+<b class="nc"><i>95</i>&nbsp;                    System.out.println(getStrings(5));</b>
+<b class="nc"><i>96</i>&nbsp;                    deleteCurrency_menu();</b>
+<i>97</i>&nbsp;                    break;
+<i>98</i>&nbsp;            }
+<b class="nc"><i>99</i>&nbsp;        }</b>
+<b class="nc"><i>100</i>&nbsp;    }</b>
+<i>101</i>&nbsp;
+<i>102</i>&nbsp;    public void deleteCurrency_menu(){
+<b class="nc"><i>103</i>&nbsp;        System.out.print(&quot;\nEnter the currency code: &quot;);</b>
+<b class="nc"><i>104</i>&nbsp;        String code = sc.next().toUpperCase();</b>
+<i>105</i>&nbsp;        try {
+<b class="nc"><i>106</i>&nbsp;            deleteCurrency(code);</b>
+<b class="nc"><i>107</i>&nbsp;        } catch (Exception e) {</b>
+<b class="nc"><i>108</i>&nbsp;            System.err.println(e.getMessage());</b>
+<b class="nc"><i>109</i>&nbsp;        }</b>
+<b class="nc"><i>110</i>&nbsp;    }</b>
+<i>111</i>&nbsp;
+<i>112</i>&nbsp;    public void deleteCurrency(String code) throws Exception {
+<b class="fc"><i>113</i>&nbsp;        if (!currencyDatabase.currencyExists(code)) {</b>
+<b class="fc"><i>114</i>&nbsp;            throw new Exception(&quot;Currency does not exist: &quot; + code);</b>
+<i>115</i>&nbsp;        }
+<i>116</i>&nbsp;
+<b class="fc"><i>117</i>&nbsp;        currencyDatabase.deleteCurrency(code);</b>
+<b class="fc"><i>118</i>&nbsp;    }</b>
 <i>119</i>&nbsp;
-<i>120</i>&nbsp;        //Check format of code
-<b class="fc"><i>121</i>&nbsp;        if (code.length() != 3) {</b>
-<b class="fc"><i>122</i>&nbsp;            throw new Exception(&quot;A currency code should have 3 characters.&quot;);</b>
-<i>123</i>&nbsp;        }
-<i>124</i>&nbsp;
-<i>125</i>&nbsp;        //Check minimum length of name
-<b class="fc"><i>126</i>&nbsp;        if (name.length() &lt; 4) {</b>
-<b class="fc"><i>127</i>&nbsp;            throw new Exception(&quot;A currency&#39;s name should be at least 4 characters long.&quot;);</b>
-<i>128</i>&nbsp;        }
-<i>129</i>&nbsp;
-<i>130</i>&nbsp;        //Check if currency already exists
-<b class="fc"><i>131</i>&nbsp;        if (currencyDatabase.currencyExists(code)) {</b>
-<b class="fc"><i>132</i>&nbsp;            throw new Exception(&quot;The currency &quot; + code + &quot; already exists.&quot;);</b>
-<i>133</i>&nbsp;        }
-<i>134</i>&nbsp;        //Add currency to database
-<b class="fc"><i>135</i>&nbsp;        currencyDatabase.addCurrency(new Currency(code,name,major));</b>
-<i>136</i>&nbsp;
-<b class="fc"><i>137</i>&nbsp;    }</b>
+<i>120</i>&nbsp;    public void addCurrency_menu(){
+<b class="nc"><i>121</i>&nbsp;        System.out.print(&quot;\nEnter the currency code: &quot;);</b>
+<b class="nc"><i>122</i>&nbsp;        String code = sc.next().toUpperCase();</b>
+<b class="nc"><i>123</i>&nbsp;        System.out.print(&quot;Enter currency name: &quot;);</b>
+<b class="nc"><i>124</i>&nbsp;        String name = sc.next();</b>
+<b class="nc"><i>125</i>&nbsp;        name += sc.nextLine();</b>
+<i>126</i>&nbsp;
+<b class="nc"><i>127</i>&nbsp;        String major = &quot;\n&quot;;</b>
+<b class="nc"><i>128</i>&nbsp;        while (!(major.equalsIgnoreCase(&quot;y&quot;) || major.equalsIgnoreCase(&quot;n&quot;))) {</b>
+<b class="nc"><i>129</i>&nbsp;            System.out.println(&quot;Is this a major currency? [y/n]&quot;);</b>
+<b class="nc"><i>130</i>&nbsp;            major = sc.next();</b>
+<i>131</i>&nbsp;        }
+<i>132</i>&nbsp;
+<i>133</i>&nbsp;        try {
+<b class="nc"><i>134</i>&nbsp;            addCurrency(code, name, major.equalsIgnoreCase(&quot;y&quot;));</b>
+<b class="nc"><i>135</i>&nbsp;        } catch (Exception e) {</b>
+<b class="nc"><i>136</i>&nbsp;            System.err.println(e.getMessage());</b>
+<b class="nc"><i>137</i>&nbsp;        }</b>
 <i>138</i>&nbsp;
-<i>139</i>&nbsp;    public void checkExchangeRateMenu(){
-<b class="nc"><i>140</i>&nbsp;        System.out.print(&quot;\nEnter source currency code (e.g. EUR): &quot;);</b>
-<b class="nc"><i>141</i>&nbsp;        String src = sc.next().toUpperCase();</b>
-<b class="nc"><i>142</i>&nbsp;        System.out.print(&quot;\nEnter destination currency code (e.g. GBP): &quot;);</b>
-<b class="nc"><i>143</i>&nbsp;        String dst = sc.next().toUpperCase();</b>
-<i>144</i>&nbsp;
-<b class="nc"><i>145</i>&nbsp;        checkExchangeRate(src,dst);</b>
-<b class="nc"><i>146</i>&nbsp;    }</b>
-<i>147</i>&nbsp;    public void checkExchangeRate(String src,String dst){
-<i>148</i>&nbsp;
-<i>149</i>&nbsp;        try {
-<b class="fc"><i>150</i>&nbsp;            ExchangeRate rate = getExchangeRate(src, dst);</b>
-<b class="fc"><i>151</i>&nbsp;            System.out.println(rate.toString());</b>
-<b class="fc"><i>152</i>&nbsp;        } catch (Exception e) {</b>
-<b class="fc"><i>153</i>&nbsp;            System.out.println(e.getMessage());</b>
-<b class="nc"><i>154</i>&nbsp;        }</b>
-<b class="fc"><i>155</i>&nbsp;    }</b>
-<i>156</i>&nbsp;
-<i>157</i>&nbsp;    public ExchangeRate getExchangeRate(String sourceCurrency, String destinationCurrency) throws Exception {
-<b class="fc"><i>158</i>&nbsp;        return currencyDatabase.getExchangeRate(sourceCurrency, destinationCurrency);</b>
-<i>159</i>&nbsp;    }
-<i>160</i>&nbsp;
-<i>161</i>&nbsp;    public void getAllCurrencies (){
-<b class="fc"><i>162</i>&nbsp;        List&lt;Currency&gt; currencies = currencyDatabase.getCurrencies();</b>
-<b class="fc"><i>163</i>&nbsp;        System.out.println(&quot;\nAvailable Currencies\n--------------------&quot;);</b>
-<b class="fc"><i>164</i>&nbsp;        for (Currency currency : currencies) {</b>
-<b class="nc"><i>165</i>&nbsp;            System.out.println(currency.toString());</b>
-<b class="nc"><i>166</i>&nbsp;        }</b>
-<b class="fc"><i>167</i>&nbsp;    }</b>
-<i>168</i>&nbsp;
-<i>169</i>&nbsp;    public void getExchangeRates() throws Exception {
-<b class="fc"><i>170</i>&nbsp;        List&lt;ExchangeRate&gt; exchangeRates = getMajorCurrencyRates();</b>
-<b class="fc"><i>171</i>&nbsp;        System.out.println(&quot;\nMajor Currency Exchange Rates\n-----------------------------&quot;);</b>
-<b class="fc"><i>172</i>&nbsp;        for (ExchangeRate rate : exchangeRates) {</b>
-<b class="nc"><i>173</i>&nbsp;            System.out.println(rate.toString());</b>
-<b class="nc"><i>174</i>&nbsp;        }</b>
-<b class="fc"><i>175</i>&nbsp;    }</b>
-<i>176</i>&nbsp;
-<i>177</i>&nbsp;    public List&lt;ExchangeRate&gt; getMajorCurrencyRates() throws Exception {
-<i>178</i>&nbsp;
-<b class="fc"><i>179</i>&nbsp;        List&lt;ExchangeRate&gt; exchangeRates = new ArrayList&lt;ExchangeRate&gt;();</b>
-<i>180</i>&nbsp;
-<b class="fc"><i>181</i>&nbsp;        List&lt;Currency&gt; currencies = currencyDatabase.getMajorCurrencies();</b>
-<i>182</i>&nbsp;
-<b class="fc"><i>183</i>&nbsp;        for (Currency src : currencies) {</b>
-<b class="fc"><i>184</i>&nbsp;            for (Currency dst : currencies) {</b>
-<b class="fc"><i>185</i>&nbsp;                if (src != dst) {</b>
-<b class="fc"><i>186</i>&nbsp;                    exchangeRates.add(currencyDatabase.getExchangeRate(src.code, dst.code));</b>
-<i>187</i>&nbsp;                }
-<b class="fc"><i>188</i>&nbsp;            }</b>
-<b class="fc"><i>189</i>&nbsp;        }</b>
-<b class="fc"><i>190</i>&nbsp;        return exchangeRates;</b>
-<i>191</i>&nbsp;    }
-<i>192</i>&nbsp;}
+<b class="nc"><i>139</i>&nbsp;    }</b>
+<i>140</i>&nbsp;
+<i>141</i>&nbsp;    public void addCurrency(String code, String name, boolean major) throws Exception {
+<i>142</i>&nbsp;
+<i>143</i>&nbsp;        //Check format of code
+<b class="fc"><i>144</i>&nbsp;        if (code.length() != 3) {</b>
+<b class="fc"><i>145</i>&nbsp;            throw new Exception(&quot;A currency code should have 3 characters.&quot;);</b>
+<i>146</i>&nbsp;        }
+<i>147</i>&nbsp;
+<i>148</i>&nbsp;        //Check minimum length of name
+<b class="fc"><i>149</i>&nbsp;        if (name.length() &lt; 4) {</b>
+<b class="fc"><i>150</i>&nbsp;            throw new Exception(&quot;A currency&#39;s name should be at least 4 characters long.&quot;);</b>
+<i>151</i>&nbsp;        }
+<i>152</i>&nbsp;
+<i>153</i>&nbsp;        //Check if currency already exists
+<b class="fc"><i>154</i>&nbsp;        if (currencyDatabase.currencyExists(code)) {</b>
+<b class="fc"><i>155</i>&nbsp;            throw new Exception(&quot;The currency &quot; + code + &quot; already exists.&quot;);</b>
+<i>156</i>&nbsp;        }
+<i>157</i>&nbsp;        //Add currency to database
+<b class="fc"><i>158</i>&nbsp;        currencyDatabase.addCurrency(new Currency(code,name,major));</b>
+<i>159</i>&nbsp;
+<b class="fc"><i>160</i>&nbsp;    }</b>
+<i>161</i>&nbsp;
+<i>162</i>&nbsp;    public void checkExchangeRateMenu(){
+<b class="nc"><i>163</i>&nbsp;        System.out.print(&quot;\nEnter source currency code (e.g. EUR): &quot;);</b>
+<b class="nc"><i>164</i>&nbsp;        String src = sc.next().toUpperCase();</b>
+<b class="nc"><i>165</i>&nbsp;        System.out.print(&quot;\nEnter destination currency code (e.g. GBP): &quot;);</b>
+<b class="nc"><i>166</i>&nbsp;        String dst = sc.next().toUpperCase();</b>
+<i>167</i>&nbsp;
+<b class="nc"><i>168</i>&nbsp;        checkExchangeRate(src,dst);</b>
+<b class="nc"><i>169</i>&nbsp;    }</b>
+<i>170</i>&nbsp;    public void checkExchangeRate(String src,String dst){
+<i>171</i>&nbsp;
+<i>172</i>&nbsp;        try {
+<b class="fc"><i>173</i>&nbsp;            ExchangeRate rate = getExchangeRate(src, dst);</b>
+<b class="fc"><i>174</i>&nbsp;            System.out.println(rate.toString());</b>
+<b class="fc"><i>175</i>&nbsp;        } catch (Exception e) {</b>
+<b class="fc"><i>176</i>&nbsp;            System.out.println(e.getMessage());</b>
+<b class="nc"><i>177</i>&nbsp;        }</b>
+<b class="fc"><i>178</i>&nbsp;    }</b>
+<i>179</i>&nbsp;
+<i>180</i>&nbsp;    public ExchangeRate getExchangeRate(String sourceCurrency, String destinationCurrency) throws Exception {
+<b class="fc"><i>181</i>&nbsp;        return currencyDatabase.getExchangeRate(sourceCurrency, destinationCurrency);</b>
+<i>182</i>&nbsp;    }
+<i>183</i>&nbsp;
+<i>184</i>&nbsp;    public void getAllCurrencies (){
+<b class="fc"><i>185</i>&nbsp;        List&lt;Currency&gt; currencies = currencyDatabase.getCurrencies();</b>
+<b class="fc"><i>186</i>&nbsp;        System.out.println(&quot;\nAvailable Currencies\n--------------------&quot;);</b>
+<b class="fc"><i>187</i>&nbsp;        for (Currency currency : currencies) {</b>
+<b class="nc"><i>188</i>&nbsp;            System.out.println(currency.toString());</b>
+<b class="nc"><i>189</i>&nbsp;        }</b>
+<b class="fc"><i>190</i>&nbsp;    }</b>
+<i>191</i>&nbsp;
+<i>192</i>&nbsp;    public void getExchangeRates() throws Exception {
+<b class="fc"><i>193</i>&nbsp;        List&lt;ExchangeRate&gt; exchangeRates = getMajorCurrencyRates();</b>
+<b class="fc"><i>194</i>&nbsp;        System.out.println(&quot;\nMajor Currency Exchange Rates\n-----------------------------&quot;);</b>
+<b class="fc"><i>195</i>&nbsp;        for (ExchangeRate rate : exchangeRates) {</b>
+<b class="nc"><i>196</i>&nbsp;            System.out.println(rate.toString());</b>
+<b class="nc"><i>197</i>&nbsp;        }</b>
+<b class="fc"><i>198</i>&nbsp;    }</b>
+<i>199</i>&nbsp;
+<i>200</i>&nbsp;    public List&lt;ExchangeRate&gt; getMajorCurrencyRates() throws Exception {
+<i>201</i>&nbsp;
+<b class="fc"><i>202</i>&nbsp;        List&lt;ExchangeRate&gt; exchangeRates = new ArrayList&lt;ExchangeRate&gt;();</b>
+<i>203</i>&nbsp;
+<b class="fc"><i>204</i>&nbsp;        List&lt;Currency&gt; currencies = currencyDatabase.getMajorCurrencies();</b>
+<i>205</i>&nbsp;
+<b class="fc"><i>206</i>&nbsp;        for (Currency src : currencies) {</b>
+<b class="fc"><i>207</i>&nbsp;            for (Currency dst : currencies) {</b>
+<b class="fc"><i>208</i>&nbsp;                if (src != dst) {</b>
+<b class="fc"><i>209</i>&nbsp;                    exchangeRates.add(currencyDatabase.getExchangeRate(src.code, dst.code));</b>
+<i>210</i>&nbsp;                }
+<b class="fc"><i>211</i>&nbsp;            }</b>
+<b class="fc"><i>212</i>&nbsp;        }</b>
+<b class="fc"><i>213</i>&nbsp;        return exchangeRates;</b>
+<i>214</i>&nbsp;    }
+<i>215</i>&nbsp;}
 </div>
 </div>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2020-01-04 14:46</div>
+    <div style="float:right;">generated on 2020-01-05 15:19</div>
 </div>
 </body>
 </html>

@@ -27,7 +27,6 @@ public class CurrencyServerTest {
 
     @Test
     public void getExchangeRateReturnLessThenTest(){
-
         currencyServer.setSeed(2);
         double test = currencyServer.getExchangeRate("qwe","eqe");
         assertTrue((test < 1.5) && test > 0);
